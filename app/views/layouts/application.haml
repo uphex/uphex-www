@@ -1,0 +1,20 @@
+!!! 5
+!= cc_html(lang: 'en') do
+  %head
+    %meta{:charset => 'utf-8'}
+    %title UpHex
+    = javascript_include_tag 'modernizr'
+    = stylesheet_link_tag 'application'
+
+  %body
+    = yield
+
+    %footer.mod-footer
+      .layout-wrap
+        %ul
+          %li= link_to 'terms', '#'
+          %li= link_to 'privacy', '#'
+          %li.mail= mail_to 'support@uphex.com', 'support@uphex.com'
+
+        %p
+          Copyright &copy; 2013 UpHex, all rights reserved.
