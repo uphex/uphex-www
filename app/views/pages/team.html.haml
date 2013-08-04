@@ -1,0 +1,54 @@
+= partial 'shared/header'
+
+.layout-wrap
+  %section.mod-intro
+    %header
+      %h1 Who We Are
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in ante turpis. Fusce nec turpis dolor. Sed a enim eu. Duis vulputate nisi volutpat leo dignissim ornare.
+
+  %section.mod-team
+    %h1 Meet the UpHex Team
+
+    %article
+      %h2
+        John Feminella,
+        %span co-founder
+
+      = image_tag 'avatar.png'
+
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et erat ipsum. Vestibulum eget odio eros. Suspendisse eu est quis enim egestas rhoncus. Duis nisl sapien, porttitor non faucibus et, vulputate at sem. Vestibulum consequat ipsum et velit porta molestie. Donec elementum feugiat sollicitudin. Nulla venenatis dignissim ipsum. Aliquam consectetur felis eget libero vehicula vestibulum. Donec nec felis in enim condimentum porttitor ut vel felis.
+
+      %p Donec gravida tortor vel nunc dictum sit amet dignissim dui tincidunt. In iaculis purus non tellus elementum vitae consectetur diam dapibus. Nulla lacinia cursus consequat. Duis vulputate nisi volutpat leo dignissim ornare.
+
+      %ul
+        %li= link_to 'Email', '#', :class => 'mail'
+        %li= link_to 'Google+', '#', :class => 'google'
+        %li= link_to 'LinkedIn', '#', :class => 'linkedin'
+        %li= link_to 'Twitter', '#', :class => 'twitter'
+
+    %article
+      %h2
+        Bradley Kipp,
+        %span co-founder
+
+      = image_tag 'avatar.png'
+
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et erat ipsum. Vestibulum eget odio eros. Suspendisse eu est quis enim egestas rhoncus. Duis nisl sapien, porttitor non faucibus et, vulputate at sem. Vestibulum consequat ipsum et velit porta molestie. Donec elementum feugiat sollicitudin. Nulla venenatis dignissim ipsum. Aliquam consectetur felis eget libero vehicula vestibulum. Donec nec felis in enim condimentum porttitor ut vel felis.
+
+      %p Donec gravida tortor vel nunc dictum sit amet dignissim dui tincidunt. In iaculis purus non tellus elementum vitae consectetur diam dapibus. Nulla lacinia cursus consequat. Duis vulputate nisi volutpat leo dignissim ornare.
+
+      %ul
+        %li= link_to 'Email', '#', :class => 'mail'
+        %li= link_to 'Google+', '#', :class => 'google'
+        %li= link_to 'LinkedIn', '#', :class => 'linkedin'
+        %li= link_to 'Twitter', '#', :class => 'twitter'
+
+  %section.mod-contact
+    %header
+      %h1 Contact Us
+      %p We'd love to hear from you.
+
+    %ul
+      %li= link_to '@uphexco', '#', :class => 'twitter'
+      %li= link_to '9 Elliewood Avenue<br>Charlottesville, VA 22903', '#', :class => 'address'
+      %li= mail_to 'hello@uphex.com', 'hello@uphex.com'
