@@ -15,6 +15,7 @@ gem 'rake'
 
 # Component requirements
 gem 'haml'
+gem 'compass'
 
 # Test requirements
 gem 'rspec', :group => 'test'
