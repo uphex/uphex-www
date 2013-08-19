@@ -6,6 +6,15 @@ module UpHex
 
     register CompassInitializer
 
+    register Sinatra::AssetPack
+
+    assets {
+      serve '/stylesheets', from: 'assets/stylesheets'
+      serve '/images'     , from: 'assets/images'
+
+      css :application, ['stylesheets/application.css']
+    }
+
     enable :sessions
 
     ##
