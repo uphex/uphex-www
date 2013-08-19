@@ -19,6 +19,7 @@ gem 'rake'
 # Component requirements
 gem 'haml'
 gem 'compass'
+gem 'sass-globbing'
 gem 'sinatra-assetpack'
 
 # Test requirements
