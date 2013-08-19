@@ -16,6 +16,7 @@ gem 'rake'
 # Component requirements
 gem 'haml'
 gem 'compass'
+gem 'sinatra-assetpack'
 
 # Test requirements
 gem 'rspec', :group => 'test'
