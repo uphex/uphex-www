@@ -95,4 +95,5 @@ DEPENDENCIES
   rack-test
   rake
   rspec
+  sinatra
   sinatra-assetpack
