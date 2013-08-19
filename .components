@@ -4,6 +4,6 @@
 :mock: none
 :script: none
 :renderer: haml
-:stylesheet: none
+:stylesheet: compass
 :namespace: Web
 :migration_format: number
