@@ -1,0 +1,46 @@
+.alert-box {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 34px 34px;
+  padding: 17px 22px 17px 17px;
+  background: $red-bg;
+  &:before {
+    width: 19px;
+    height: 19px;
+    top: 12px;
+    left: -30px;
+    position: absolute;
+    display: block;
+    content: "";
+    @include data-uri-bg("i_alert_error.png");
+    @include retina {
+      @include data-uri-bg("i_alert_error2x.png");
+      background-size: 100%;
+    }
+  }
+  &:after {
+    width: 9px;
+    height: 14px;
+    top: 16px;
+    left: -8px;
+    position: absolute;
+    display: block;
+    content: "";
+    @include data-uri-bg("i_arrow_left_red.png");
+    background-size: 100%;
+  }
+  .alert {
+    margin-top: 14px;
+    font-weight: 300;
+    font-size: 12px;
+    color: white;
+    @include text-shadow(1px 0 0 rgba(black, 0.3));
+    &:before {
+      content: "\00BB\00A0";
+      font-family: $font-alt;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

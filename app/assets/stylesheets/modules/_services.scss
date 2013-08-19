@@ -1,0 +1,156 @@
+.mod-services {
+  margin-bottom: 90px;
+  text-align: center;
+  header {
+    margin-bottom: 36px;
+  }
+  p {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 1.3;
+    letter-spacing: 0.1em;
+    color: $font-light;
+  }
+  ul {
+    @extend %clearfix;
+    width: 100%;
+    font-family: $font-alt;
+    font-size: 10px;
+    font-weight: 500;
+    color: $font-light;
+    @include border-radius(4px);
+  }
+  li {
+    width: 137px;
+    height: 139px;
+    float: left;
+    &:first-child a {
+      border-left: 1px solid $gray-light;
+      @include border-radius(5px 0 0 5px);
+    }
+    &:last-child a {
+      border-right: 1px solid $gray-light;
+      @include border-radius(0 5px 5px 0);
+    }
+    // IE8 fix
+    &.last-child a {
+      border-right: 1px solid $gray-light;
+      @include border-radius(0 5px 5px 0);
+    }
+    a {
+      height: 137px;
+      display: block;
+      padding: 102px 20px 0;
+      letter-spacing: 0.1em;
+      line-height: 1.25;
+      border-top: 1px solid $gray-light;
+      border-bottom: 1px solid $gray-light;
+      background-repeat: no-repeat !important;
+      background-position: center 22px !important;
+      @include retina {
+        background-size: auto 46px !important;
+      }
+
+      &.google {
+        padding-top: 96px;
+      }
+      &.facebook {
+        @include data-uri-bg("i_facebook_gray.png");
+        @include retina {
+          @include data-uri-bg("i_facebook_gray2x.png");
+        }
+      }
+      &.paypal {
+        @include data-uri-bg("i_paypal_gray.png");
+        @include retina {
+          @include data-uri-bg("i_paypal_gray2x.png");
+        }
+      }
+      &.amazon {
+        @include data-uri-bg("i_amazon_gray.png");
+        @include retina {
+          @include data-uri-bg("i_amazon_gray2x.png");
+        }
+      }
+      &.twitter {
+        @include data-uri-bg("i_twitter_gray.png");
+        @include retina {
+          @include data-uri-bg("i_twitter_gray2x.png");
+        }
+      }
+      &.google {
+        @include data-uri-bg("i_google_gray.png");
+        @include retina {
+          @include data-uri-bg("i_google_gray2x.png");
+        }
+      }
+      &.youtube {
+        @include data-uri-bg("i_youtube_gray.png");
+        @include retina {
+          @include data-uri-bg("i_youtube_gray2x.png");
+        }
+      }
+      &.shopify {
+        @include data-uri-bg("i_shopify_gray.png");
+        @include retina {
+          @include data-uri-bg("i_shopify_gray2x.png");
+        }
+      }
+      &:hover,
+      &:focus {
+        color: white;
+        border: none;
+        &.facebook {
+          background: #4967a9;
+          @include data-uri-bg("i_facebook_white.png", #4967a9);
+          @include retina {
+            @include data-uri-bg("i_facebook_white2x.png", #4967a9);
+          }
+        }
+        &.paypal {
+          background: #003366;
+          @include data-uri-bg("i_paypal_white.png", #003366);
+          @include retina {
+            @include data-uri-bg("i_paypal_white2x.png", #003366);
+          }
+        }
+        &.amazon {
+          background: #ff9900;
+          @include data-uri-bg("i_amazon_white.png", #ff9900);
+          @include retina {
+            @include data-uri-bg("i_amazon_white2x.png", #ff9900);
+          }
+        }
+        &.twitter {
+          background: #2aa9e0;
+          @include data-uri-bg("i_twitter_white.png", #2aa9e0);
+          @include retina {
+            @include data-uri-bg("i_twitter_white2x.png", #2aa9e0);
+          }
+        }
+        &.google {
+          background: #f7931e;
+          @include data-uri-bg("i_google_white.png", #f7931e);
+          @include retina {
+            @include data-uri-bg("i_google_white2x.png", #f7931e);
+          }
+        }
+        &.youtube {
+          background: #6d0d13;
+          @include data-uri-bg("i_youtube_white.png", #6d0d13);
+          @include retina {
+            @include data-uri-bg("i_youtube_white2x.png", #6d0d13);
+          }
+        }
+        &.shopify {
+          background: #8ebc38;
+          @include data-uri-bg("i_shopify_white.png", #8ebc38);
+          @include retina {
+            @include data-uri-bg("i_shopify_white2x.png", #8ebc38);
+          }
+        }
+      }
+    }
+  }
+}

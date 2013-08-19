@@ -1,0 +1,18 @@
+.mod-intro {
+  margin-bottom: 180px;
+  text-align: center;
+  header {
+    margin-bottom: 42px;
+  }
+  p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 1.4;
+    letter-spacing: 0.075em;
+    color: $font-light;
+  }
+  li {
+    display: inline-block;
+  }
+}

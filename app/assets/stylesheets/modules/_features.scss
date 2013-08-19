@@ -1,0 +1,74 @@
+.mod-features {
+  margin-bottom: 90px;
+  text-align: center;
+  header {
+    margin-bottom: 55px;
+    p {
+      width: 75%;
+      margin: 0 auto;
+      font-size: 19px;
+      line-height: 1.3;
+      letter-spacing: 0.075em;
+      color: $font-light;
+    }
+  }
+  h3 {
+    margin-bottom: 16px;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+  }
+  ul {
+    font-size: 0;
+    li {
+      width: 30%;
+      display: inline-block;
+      position: relative;
+      margin-left: 4.9%;
+      padding-top: 130px;
+      vertical-align: top;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:before {
+        content: "";
+        width: 94px;
+        height: 94px;
+        display: block;
+        top: 0;
+        left: 50%;
+        margin-left: -47px;
+        position: absolute;
+        border: 5px solid $blue;
+        @include border-radius(50%);
+      }
+      &.integration:before {
+        @include data-uri-bg("i_integration.png", no-repeat center center);
+        @include retina {
+          @include data-uri-bg("i_integration2x.png", no-repeat center center);
+          background-size: 43px;
+        }
+      }
+      &.monitoring:before {
+        @include data-uri-bg("i_monitoring.png", no-repeat center center);
+        @include retina {
+          @include data-uri-bg("i_monitoring2x.png", no-repeat center center);
+          background-size: 43px;
+        }
+      }
+      &.alerts:before {
+        @include data-uri-bg("i_alerts.png", no-repeat center center);
+        @include retina {
+          @include data-uri-bg("i_alerts2x.png", no-repeat center center);
+          background-size: 43px auto;
+        }
+      }
+    }
+    p {
+      padding: 0 3%;
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: 0.025em;
+      color: $font-light;
+    }
+  }
+}

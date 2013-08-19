@@ -1,0 +1,122 @@
+.mod-signup {
+  margin: 0 32px 150px;
+  padding-bottom: 53px;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  border-top: none;
+  border-bottom-color: #f9f9f9;
+  h3 {
+    height: 80px;
+    margin-bottom: 48px;
+    font-family: $font-alt;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    line-height: 80px;
+    color: white;
+    background: $black;
+    background: rgba($black, 0.95);
+  }
+  .progress,
+  h4,
+  form,
+  footer {
+    width: 465px;
+    margin: 0 auto;
+  }
+  .progress {
+    height: 35px;
+    margin-bottom: 80px;
+    border-bottom: dashed 2px $black;
+    span {
+      float: right;
+      display: block;
+      position: relative;
+      right: -52px;
+      font-family: $font-alt;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.075em;
+      text-align: right;
+      &:first-child {
+        left: -52px;
+        float: left;
+        text-align: left;
+      }
+      &:after {
+        width: 8px;
+        height: 8px;
+        content: "";
+        display: block;
+        top: 22px;
+        left: 44%;
+        left: calc(50% - 7px);
+        left: 50% \9;
+        position: absolute;
+        border: 6px solid $black;
+        background: $black;
+        @include border-radius(50%);
+      }
+      &.current:after {
+        background: white;
+      }
+    }
+  }
+  h4 {
+    display: inline-block;
+    margin-bottom: 32px;
+    padding-left: 80px;
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    text-align: left;
+    span {
+      display: block;
+      font-size: 15px;
+      font-weight: 300;
+    }
+    a {
+      font-weight: bold;
+      color: $green;
+    }
+    &.account {
+      @include data-uri-bg("i_padlock.png", no-repeat 30px 10px);
+      @include retina {
+        @include data-uri-bg("i_padlock2x.png", no-repeat 30px 10px);
+        background-size: 24px auto;
+      }
+    }
+    &.payment {
+      @include data-uri-bg("i_card.png", no-repeat 26px 7px);
+      @include retina {
+        @include data-uri-bg("i_card2x.png", no-repeat 26px 7px);
+        background-size: 29px auto;
+      }
+    }
+  }
+  .cvc,
+  .expiration {
+    width: 50%;
+    float: left;
+  }
+  .cvc {
+    padding-right: 12px;
+  }
+  .expiration {
+    padding-left: 12px;
+  }
+  footer {
+    margin-top: 28px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    a {
+      display: inline-block;
+      line-height: 2;
+      color: $blue;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}

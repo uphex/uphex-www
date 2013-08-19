@@ -1,0 +1,60 @@
+.mod-contact {
+  margin-bottom: 120px;
+  text-align: center;
+  header {
+    margin-bottom: 76px;
+  }
+  p {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    color: $font-light;
+  }
+  ul {
+    @extend %clearfix;
+    padding-left: 40px;
+  }
+  li {
+    padding: 0 50px;
+    display: inline-block;
+    border-left: 1px dashed #cccccc;
+    vertical-align: bottom;
+    &:first-child {
+      border-left: none;
+    }
+    a {
+      height: 107px;
+      display: block;
+      padding-top: 48px;
+      font-size: 21px;
+      letter-spacing: 0.001em;
+      line-height: 1.5;
+      color: #54bce8;
+      background-position: center 16px !important;
+      @include retina {
+        background-size: auto 23px !important;
+      }
+
+      &.twitter {
+        @include data-uri-bg("i_twitter_blue.png");
+        @include retina {
+          @include data-uri-bg("i_twitter_blue2x.png");
+        }
+      }
+      &.address {
+        @include data-uri-bg("i_globe_blue.png");
+        @include retina {
+          @include data-uri-bg("i_globe_blue2x.png");
+        }
+      }
+      &[href^='mailto'] {
+        @include data-uri-bg("i_mail_blue.png");
+        @include retina {
+          @include data-uri-bg("i_mail_blue2x.png");
+        }
+      }
+    }
+  }
+}

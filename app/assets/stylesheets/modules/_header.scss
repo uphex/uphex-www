@@ -1,0 +1,79 @@
+.mod-header {
+  height: 76px;
+  position: relative;
+  margin-bottom: 90px;
+  font-family: $font-alt;
+  color: $font-light;
+  border-bottom: 1px solid white;
+  border-bottom: 2px solid #cccccc \9;
+  background: lighten(#e6e6e6, 5%);
+  @include background(linear-gradient(top, white #e6e6e6));
+  @include box-shadow(0 3px 5px rgba(black, 0.3));
+  .no-touch & {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    margin: 0;
+    z-index: 10;
+  }
+  h1 {
+    width: 124px;
+    height: 42px;
+    top: 17px;
+    position: relative;
+    float: left;
+    @include data-uri-bg("logo.png");
+    @include hide-text;
+    background-size: 100%;
+    background-image: image-url("logo_ie8.png") \9;
+    @include retina {
+      @include data-uri-bg("logo2x.png");
+    }
+
+    a {
+      height: 42px;
+      display: block;
+    }
+  }
+  nav {
+    float: right;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    li {
+      height: 75px;
+      float: left;
+      @include text-shadow(1px 1px 0 white);
+      &:last-child {
+        padding-left: 38px;
+        text-shadow: none;
+        a {
+          border: none;
+        }
+      }
+    }
+    a {
+      display: block;
+      padding: 0 38px;
+      line-height: 70px;
+      border-top: 5px solid transparent;
+      &:hover,
+      &:focus {
+        color: $blue;
+        border-color: $blue;
+      }
+    }
+    .button {
+      width: 140px;
+      height: 35px;
+      top: 23px;
+      position: relative;
+      margin-right: 0;
+      padding: 0;
+      font-size: 11px;
+      line-height: 35px;
+      letter-spacing: 0.025em;
+      text-align: center;
+    }
+  }
+}

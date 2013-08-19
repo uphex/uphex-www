@@ -1,0 +1,33 @@
+.mod-header_signup {
+  margin-bottom: 46px;
+  text-align: center;
+  h1 {
+    width: 146px;
+    height: 49px;
+    display: inline-block;
+    position: relative;
+    margin: 65px 0 50px;
+    @include data-uri-bg("logo.png");
+    @include hide-text;
+    @include retina {
+      @include data-uri-bg("logo2x.png");
+      background-size: 100%;
+    }
+
+    a {
+      width: 146px;
+      height: 49px;
+      display: block;
+    }
+  }
+  h2 {
+    margin-bottom: 20px;
+    font-size: 49px;
+    letter-spacing: 0.01em;
+  }
+  p {
+    font-size: 21px;
+    letter-spacing: 0.075em;
+    color: $gray-medium;
+  }
+}
