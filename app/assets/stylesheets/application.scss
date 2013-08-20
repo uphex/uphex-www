@@ -1,3 +1,5 @@
+$legacy-support-for-ie: false;
+
 @import "compass";
 @import "compass/reset";
 
@@ -5,6 +7,22 @@
 @import "utilities/mixins";
 @import "utilities/placeholders";
 
-@import "base/*";
-@import "components/*";
-@import "modules/*";
+@import "base/forms";
+@import "base/layout";
+@import "base/typography";
+
+@import "components/alerts";
+@import "components/buttons";
+
+@import "modules/contact";
+@import "modules/faq";
+@import "modules/features";
+@import "modules/footer";
+@import "modules/header-signup";
+@import "modules/header";
+@import "modules/intro";
+@import "modules/plans";
+@import "modules/services";
+@import "modules/signup";
+@import "modules/team";
+@import "modules/thoughts";
