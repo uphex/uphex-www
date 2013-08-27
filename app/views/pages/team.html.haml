@@ -50,5 +50,9 @@
 
     %ul
       %li= link_to '@uphexco', '#', :class => 'twitter'
-      %li= link_to '9 Elliewood Avenue<br>Charlottesville, VA 22903', '#', :class => 'address'
+      %li
+        %a.address
+          9 Elliewood Avenue
+          %br
+          Charlottesville, VA 22903
       %li= mail_to 'hello@uphex.com', 'hello@uphex.com'
