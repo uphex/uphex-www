@@ -16,8 +16,9 @@
     @extend %clearfix;
     width: 100%;
     font-family: $font-alt;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
+    text-transform: uppercase;
     color: $font-light;
     @include border-radius(4px);
   }
