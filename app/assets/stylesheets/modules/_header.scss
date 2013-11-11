@@ -27,7 +27,7 @@
     background-size: 100%;
     background-image: image-url("logo_ie8.png") \9;
     @include retina {
-      @include data-uri-bg("logo2x.png");
+      @include data-uri-bg("logo2x.png", 0% 146px 49px);
     }
 
     a {
