@@ -1,5 +1,6 @@
 UpHex::Web.controllers do
   helpers ConditionalCommentsHelper
+  helpers MissingTemplateHandler
 
   get "/CloudHealthCheck" do
     status 200
@@ -7,6 +8,8 @@ UpHex::Web.controllers do
   end
 
   get "/:id" do
-    render "pages/#{params[:id]}"
+    with_missing_template_handling do
+      render "pages/#{params[:id]}"
+    end
   end
 end
