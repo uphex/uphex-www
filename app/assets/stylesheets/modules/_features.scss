@@ -41,10 +41,10 @@
         border: 5px solid $blue;
         @include border-radius(50%);
       }
-      &.integration:before {
-        @include data-uri-bg("i_integration.png", no-repeat center center);
+      &.dashboard:before {
+        @include data-uri-bg("i_dashboard.png", no-repeat center center);
         @include retina {
-          @include data-uri-bg("i_integration2x.png", no-repeat center center);
+          @include data-uri-bg("i_dashboard2x.png", no-repeat center center);
           background-size: 43px;
         }
       }
