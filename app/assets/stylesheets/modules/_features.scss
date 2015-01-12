@@ -41,24 +41,24 @@
         border: 5px solid $blue;
         @include border-radius(50%);
       }
-      &.secure:before {
-        @include data-uri-bg("i_lock.png", no-repeat center center);
+      &.cog:before {
+        @include data-uri-bg("i_cog.png", no-repeat center center);
         @include retina {
-          @include data-uri-bg("i_lock2x.png", no-repeat center center);
+          @include data-uri-bg("i_cog2x.png", no-repeat center center);
           background-size: 43px;
         }
       }
-      &.clock:before {
-        @include data-uri-bg("i_clock.png", no-repeat center center);
+      &.monitoring:before {
+        @include data-uri-bg("i_monitoring.png", no-repeat center center);
         @include retina {
-          @include data-uri-bg("i_clock2x.png", no-repeat center center);
+          @include data-uri-bg("i_monitoring.png", no-repeat center center);
           background-size: 43px;
         }
       }
-      &.smart:before {
-        @include data-uri-bg("i_lightbulb.png", no-repeat center center);
+      &.alerts:before {
+        @include data-uri-bg("i_alerts.png", no-repeat center center);
         @include retina {
-          @include data-uri-bg("i_lightbulb2x.png", no-repeat center center);
+          @include data-uri-bg("i_alerts2x.png", no-repeat center center);
           background-size: 43px auto;
         }
       }
