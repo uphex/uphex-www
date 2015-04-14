@@ -21,6 +21,8 @@ gem 'haml'
 gem 'compass'
 gem 'sass-globbing'
 gem 'sinatra-assetpack'
+gem 'uphex-flatty',
+  :git => "git@github.com:uphex/uphex-flatty.git"
 
 # Test requirements
 gem 'rspec', :group => 'test'
