@@ -9,9 +9,8 @@ Bundler.require(:default, PADRINO_ENV)
 
 ##
 # ## Enable devel logging
-#
-# Padrino::Logger::Config[:development][:log_level]  = :devel
-# Padrino::Logger::Config[:development][:log_static] = true
+Padrino::Logger::Config[:development][:log_level]  = :devel
+Padrino::Logger::Config[:development][:log_static] = true
 #
 # ## Configure your I18n
 #
@@ -34,6 +33,15 @@ Bundler.require(:default, PADRINO_ENV)
 # Add your before (RE)load hooks here
 #
 Padrino.before_load do
+  # Add `app_root` and `app_root/lib` to the load path.
+  [Padrino.root, Padrino.root('lib')].each do |additional_path|
+    $:.unshift additional_path unless $:.include? additional_path
+  end
+
+  Dir.glob(File.join Padrino.root, 'config', 'initializers', '**', '*').each do |file|
+    Padrino.logger.devel "loading initializer: #{file}"
+    require file
+  end
 end
 
 ##
