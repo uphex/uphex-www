@@ -7,7 +7,7 @@ source 'https://rubygems.org'
 gem 'sinatra'
 
 # Server requirements
-# gem 'thin' # or mongrel
+gem 'thin'
 # gem 'trinidad', :platform => 'jruby'
 
 # Optional JSON codec (faster performance)
@@ -22,7 +22,8 @@ gem 'compass'
 gem 'sass-globbing'
 gem 'sinatra-assetpack'
 gem 'uphex-flatty',
-  :git => "git@github.com:uphex/uphex-flatty.git"
+  :git => "git@github.com:uphex/uphex-flatty.git",
+  :ref => "topic/www-redesign"
 
 # Test requirements
 gem 'rspec', :group => 'test'
