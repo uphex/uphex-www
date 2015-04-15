@@ -1,3 +1,6 @@
+require 'app/helpers/conditional_comments_helper'
+require 'app/helpers/missing_template_handler'
+
 UpHex::Web.controllers do
   helpers ConditionalCommentsHelper
   helpers MissingTemplateHandler
