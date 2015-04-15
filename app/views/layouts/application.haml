@@ -3,20 +3,8 @@
   %head
     %meta{:charset => 'utf-8'}
     %title UpHex | Proactive Marketing Alerts
-    = stylesheet_link_tag 'application'
+    != css :theme
     = favicon_tag 'favicon.png', :type => 'image/ico'
 
-  %body
+  %body.contrast-dark
     = yield
-
-    %footer.mod-footer
-      .layout-wrap
-        %ul
-          %li= link_to 'terms', '/terms.html'
-          %li= link_to 'privacy', '/privacy.html'
-          %li.mail= mail_to 'support@uphex.com', 'support@uphex.com'
-
-        %p
-          Copyright &copy; 2015 UpHex, all rights reserved.
-
-    = partial 'shared/footer'

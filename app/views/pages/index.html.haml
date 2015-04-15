@@ -1,60 +1,74 @@
-= partial 'shared/header'
+:plain
+  <!-- HEADER -->
+  <header>
+    <nav class='navbar navbar-fixed-top'>
+      <a class='navbar-brand' href='index.html'>
+        <img width="139" height="50" class="logo" alt="UpHex" src="assets/images/logo.png" />
+        <img width="44" height="50" class="logo-xs" alt="UpHex" src="assets/images/logo_xs.png" />
+      </a>
+      <ul class='nav'>
+        <li class=''>
+          <a href="./faq.html">FAQ</a>
+        </li>
+        <li class=''>
+          <a href="./login.html">LOGIN</a>
+        </li>
+    </nav>
+  </header>
+  <!-- / HEADER -->
 
-%section.layout-wrap
-  .mod-intro
-    %header
-      %h1 Proactive Marketing Alerts
-      -#%h2 UpHex is analytics management for marketing agencies.
-      %h2 UpHex is the easiest way to track your marketing metrics. Get insights delivered to your inbox - automatically!
+  <!-- MASTHEAD -->
+  <section id="masthead">
+  <div class="masthead">
+    <div class="container">
+      <div class="item active">
+        <div class="row">
+          <div class="col-md-6 masthead-title">
+            <h1 class="masthead-title">Proactive Alerting</h1>
+            <p class="masthead-text">
+            UpHex is the easiest way to track your Google Analytics, Facebook, Twitter, and Shopify metrics.
+            </p>
+            <p class="masthead-text">
+            Get intelligent alerts delivered to your inbox!
+            </p>
+            <br>
+            <div class="masthead-actions">
+              <!-- <a href="./features.html" class="btn btn-inverse btn-lg">
+              LEARN MORE
+              </a> -->
 
-    %ul
-      -# %li= link_to 'see our plans', '#', :class => 'button blue'
-      %li= link_to 'sign up for alpha', 'http://app.uphex.com/users/new', :class => 'button green'
+              <a href="./signup.html" class="btn btn-green btn-lg">
+                GET STARTED
+              </a>
+            </div> <!-- /.masthead-actions -->
+          </div> <!-- /.masthead-text -->
 
-  .mod-services
-    %header
-      %h2 Set It And Forget It
-      %p UpHex requires almost no effort. Connect your web accounts with a couple clicks, then sit back and relax. We'll alert you when there's interesting activity in one of your metrics.  
+          <div class="col-md-6 masthead-img">
+            <img width="907" height="558" class="img-responsive" alt="uphex-desktop-mobile-alerts" src="assets/images/uphex-desktop-mobile-alerts.png" />
+          </div> <!-- /.masthead-img -->
 
-    %ul
-      %li= link_to 'Google Analytics', '#', :class => 'google'
-      %li= link_to 'Facebook', '#', :class => 'facebook'
-      -# %li= link_to 'PayPal', '#', :class => 'paypal'
-      -# %li= link_to 'Amazon', '#', :class => 'amazon'
-      -# %li= link_to 'YouTube', '#', :class => 'youtube'
-      -# %li= link_to 'Shopify', '#', :class => 'shopify'
-      %li.last-child= link_to 'Twitter', '#', :class => 'twitter'
+        </div> <!-- /.row -->
 
-  .mod-features
-    %header
-      %h2 Features
-      -#%p See your clients' metrics like never before. UpHex gives you simple, yet powerful tools for analytics management.
+      </div>
 
-    %ul
-      %li.cog
-        %h3 Easy Setup
-        %p Get started in under 5 minutes. Simply connect your accounts, and we'll take care of everything else. 
+      </div>
+    </section>
 
-      %li.monitoring
-        %h3 Smart Monitoring
-        %p No customization required. Our sophisticated models intelligently adapt to your unique data.
+  </div>
+  <!-- / MASTHEAD -->
 
-      %li.alerts
-        %h3 Relevant Alerts
-        %p Right place at the right time. We'll alert you when there's activity that deserves your attention.
-
-  .mod-thoughts
-    %h2 Thoughts
-
-    %ul
-      %li
-        %blockquote Sophisticated analytics can substantially improve decision making, minimize risks, and unearth valuable insights that would otherwise remain hidden.
-        %footer
-          McKinsey Global Institute
-          %span Big Data: The next frontier for innovation, competition, and productivity
-
-      %li
-        %blockquote There is growing quantifiable evidence that data-driven decision making enabled by business analytics solutions provides a competitive difference.
-        %footer
-          Dan Veseet
-          %span Vice President, Business Analytics at IDC
+  <footer id="footer">
+    <div class="footer-wrapper">
+      <div class="row">
+        <div class="col-sm-6 buttons">
+          <a class="btn btn-link" href="mailto:support@uphex.com">EMAIL</a>
+          <a class="btn btn-link" href="https://twitter.com/uphexco">TWITTER</a>
+          <a class="btn btn-link" href="./terms.html">TERMS</a>
+          <a class="btn btn-link" href="./privacy.html">PRIVACY</a>
+        </div>
+        <div class="col-sm-6 text">
+          Copyright &copy; 2015 UpHex
+        </div>
+      </div>
+    </div>
+  </footer>
