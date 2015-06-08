@@ -45,12 +45,21 @@
     
     <!-- HEADER -->
     <header>
-      <nav class='navbar navbar-fixed-top'>
+      <nav class='navbar navbar-inverse navbar-fixed-top' role='navigation'>
+      <div class='navbar-header'>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
         <a class='navbar-brand' href='index.html'>
           <img width="139" height="50" class="logo" alt="UpHex" src="assets/images/logo.png" />
           <img width="44" height="50" class="logo-xs" alt="UpHex" src="assets/images/logo_xs.png" />
         </a>
-        <ul class='nav'>
+      </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class='nav navbar-nav navbar-right'>
           <li class=''>
             <a href="./faq.html">FAQ</a>
           </li>
@@ -61,6 +70,7 @@
             <a href="//app.uphex.com/sessions/new">LOGIN</a>
           </li>
         </ul>
+        </div>
       </nav>
     </header>
     <!-- / HEADER -->
@@ -160,7 +170,7 @@
             <span>Calculated Rates & Ratios:</span>
             </h1>
             <p class="masthead-text">
-            Avg Revenue Per Visit &#8226; Twitter Follower Ratio &#8226; Facebook Ad Performance &#8226; And Many More
+            Avg Revenue Per Visitor &#8226; Twitter Follower Ratio &#8226; Facebook Ad Performance &#8226; And Many More
             </p>
 
             <br>
@@ -259,7 +269,7 @@
                     </li>
                   </ul>
                   <div class='footer'>
-                    <a class="btn btn-green btn-lg" href="mailto:support@uphex.com?subject=Request+for+Custom+Services">
+                    <a class="btn btn-green btn-lg" href="mailto:support@uphex.com?subject=Request%20for%20Custom%20Services">
                     REQUEST A QUOTE
                     </a>
                   </div>
