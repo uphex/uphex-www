@@ -26,6 +26,9 @@ gem 'sinatra-assetpack'
 gem 'rspec', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 
+# Styleguide requirements
+gem 'hologram'
+
 # Padrino Stable Gem
 gem 'padrino', '0.11.3'
 
