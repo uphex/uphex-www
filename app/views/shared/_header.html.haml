@@ -1,8 +1,9 @@
 %header.mod-header
-  .layout-wrap
-    %h1.logo= link_to 'UpHex', '/'
+  %nav.top-bar
+    %ul.title-area
+      %li.name
+        %h1.logo= link_to 'UpHex', '/'
 
-    %nav
-      %ul
-        %li= link_to 'home', '/'
-        %li= link_to 'log in', 'http://app.uphex.com/sessions/new', :class => 'button blue'
+    %section.top-bar-section
+      %ul.right
+        %li= link_to 'log in', 'http://app.uphex.com/sessions/new'
