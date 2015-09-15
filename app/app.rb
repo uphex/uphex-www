@@ -4,7 +4,7 @@ module UpHex
     register Padrino::Mailer
     register Padrino::Helpers
 
-    register CompassInitializer
+    register SassInitializer
 
     register Sinatra::AssetPack
 

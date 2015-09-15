@@ -18,7 +18,9 @@ gem 'rake'
 
 # Component requirements
 gem 'haml'
-gem 'compass'
+gem 'sass'
+gem 'bourbon'
+gem 'neat'
 gem 'sass-globbing'
 gem 'sinatra-assetpack'
 
