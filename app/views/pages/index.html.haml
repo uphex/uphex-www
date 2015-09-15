@@ -1,40 +1,36 @@
-.main-content
-  %section.hero
-    .row
-      .medium-8.columns
-        %h1 Smart Reports For Growing Businesses
-        %p Spreadsheets are time consuming. Dashboards are confusing. Get insights delivered to your inbox with UpHex.
-        = link_to 'Pricing & Signup', 'http://app.uphex.com/users/new', :class => 'button'
+%section.hero
+  .container
+    .hero__content
+      %h1 Smart Reports For Growing Businesses
+      %p Spreadsheets are time consuming. Dashboards are confusing. Get insights delivered to your inbox with UpHex.
+      = link_to 'Pricing & Signup', 'http://app.uphex.com/users/new', class: 'button'
 
-  %section.features
-    .row
-      .medium-12.columns
-        %h2 Better Reports = Better Results
-    .row
-      .medium-8.columns
+%section.tout
+  .container
+    %h2 Better Reports = Better Results
+    .tout__item
+      .tout__content
         %h3 Automagical
         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id felis tincidunt, vulputate turpis sit amet, finibus lectus.
-    .row
-      .medium-8.push-4.columns
+    .tout__item.tout__item--right
+      .tout__content
         %h3 KPIs - Smarter Metrics
         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id felis tincidunt, vulputate turpis sit amet, finibus lectus.
-    .row
-      .medium-8.columns
+    .tout__item
+      .tout__content
         %h3 Make Informed Decisions
         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id felis tincidunt, vulputate turpis sit amet, finibus lectus.
-    .row
-      .medium-8.push-4.columns
+    .tout__item.tout__item--right
+      .tout__content
         %h3 KPIs - Smarter Metrics
         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id felis tincidunt, vulputate turpis sit amet, finibus lectus.
 
-  %section.sample
-    .row
-      .medium-6.medium-push-3.columns.text-center
-        %h2 See For Yourself
-        %p Get a sample report sent to your inbox.
-        .row.collapse
-          .small-9.columns
-            %input{:placeholder => 'Email'}
-          .small-3.columns
-            %button.button.postfix Send Report
-
+%section.ask
+  .container
+    %h2 See For Yourself
+    %p Get a sample report sent to your inbox.
+    .ask__form
+      .ask__input
+        %input{:placeholder => 'Email'}
+      .ask__button
+        %button.button.postfix Send Report

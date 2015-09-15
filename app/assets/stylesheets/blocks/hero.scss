@@ -1,0 +1,19 @@
+/*doc
+---
+title: Hero
+name: hero
+category: blocks
+---
+```html_example
+
+```
+*/
+.hero {
+  &__wrap {
+    @include outer-container;
+  }
+
+  &__content {
+    @include span-columns(8);
+  }
+}

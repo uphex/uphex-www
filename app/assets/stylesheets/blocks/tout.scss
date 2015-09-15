@@ -1,0 +1,19 @@
+/*doc
+---
+title: Hero
+name: hero
+category: blocks
+---
+```html_example
+
+```
+*/
+.tout {
+  &__item {
+    @include span-columns(8);
+
+    &--right {
+      @include shift(4)
+    }
+  }
+}

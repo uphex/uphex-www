@@ -9,7 +9,9 @@ category: layout
 ```
 */
 .header {
-  overflow: hidden;
+  &__wrap {
+    @include outer-container;
+  }
 
   &__title {
     float: left;

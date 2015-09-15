@@ -1,0 +1,36 @@
+/*doc
+---
+title: Ask
+name: ask
+category: blocks
+---
+```html_example
+
+```
+*/
+.ask {
+  text-align: center;
+
+  &__form {
+    @include span-columns(6);
+    @include omega;
+    @include shift(3);
+  }
+
+  &__input {
+    @include span-columns(9);
+    @include omega;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    @include span-columns(3);
+
+    button {
+      width: 100%;
+    }
+  }
+}
