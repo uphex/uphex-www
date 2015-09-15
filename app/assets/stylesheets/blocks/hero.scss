@@ -9,13 +9,22 @@ category: blocks
 ```
 */
 .hero {
-  &__wrap {
-    @include outer-container;
-  }
+  background: #000;
+  color: #fff;
 
+  &__content {
+    p {
+      line-height: 1.5;
+    }
+  }
   @include media($breakpoint-medium) {
     &__content {
+      margin: 100px 0;
       @include span-columns(6);
+
+      p {
+        font-size: 20px;
+      }
     }
   }
 
