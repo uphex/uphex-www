@@ -2,3 +2,11 @@
  * Neat
  */
 $border-box-sizing: true !global;
+
+/**
+ * Responsive Breakpoints
+ */
+$breakpoint-small: min-width 34em;      // Landscape phone and up
+$breakpoint-medium: min-width 48em;     // Tablet and up
+$breakpoint-large: min-width 62em;      // Desktop and up
+$breakpoint-extralarge: min-width 75em; // Bigger desktop and up

@@ -9,11 +9,14 @@ category: blocks
 ```
 */
 .tout {
-  &__item {
-    @include span-columns(8);
 
-    &--right {
-      @include shift(4)
+  @include media($breakpoint-medium) {
+    &__item {
+      @include span-columns(8);
+
+      &--right {
+        @include shift(4)
+      }
     }
   }
 }

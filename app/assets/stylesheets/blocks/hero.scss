@@ -13,7 +13,15 @@ category: blocks
     @include outer-container;
   }
 
-  &__content {
-    @include span-columns(8);
+  @include media($breakpoint-medium) {
+    &__content {
+      @include span-columns(6);
+    }
+  }
+
+  @include media($breakpoint-large) {
+    &__content {
+      @include span-columns(7);
+    }
   }
 }
