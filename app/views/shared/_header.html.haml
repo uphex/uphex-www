@@ -1,9 +1,3 @@
 %header.header
-  %nav.top-bar
-    %ul.title-area
-      %li.name
-        %h1.logo= link_to 'UpHex', '/'
-
-    %section.top-bar-section
-      %ul.right
-        %li= link_to 'log in', 'http://app.uphex.com/sessions/new'
+  %h1.logo= link_to 'UpHex', '/', class: 'header__title'
+  = link_to 'log in', 'http://app.uphex.com/sessions/new', class: 'header__link'
