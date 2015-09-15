@@ -1,5 +1,5 @@
 /**
- * Apply better, consistent box model to all elements
+ * Universal elements, like containers
  */
 
 .container {
@@ -9,4 +9,13 @@
     padding: $gutter / 2;
   }
   @include outer-container;
+}
+
+/**
+ * Typography
+ */
+
+a {
+  color: #fff;
+  text-decoration: none;
 }

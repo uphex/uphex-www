@@ -9,15 +9,24 @@ category: layout
 ```
 */
 .header {
-  &__wrap {
-    @include outer-container;
-  }
+  background: black;
 
   &__title {
+    margin: 0;
     float: left;
+
+    a {
+      display: block;
+      width: 128px;
+      height: 42px;
+      text-indent: -9999px;
+      background: url("/images/logo-white@2x.png") no-repeat;
+      background-size: 100%;
+    }
   }
 
   &__link {
     float: right;
+    line-height: 42px;
   }
 }
