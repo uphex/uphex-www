@@ -18,5 +18,12 @@
  * uphex-www
  */
 @import "base";
-@import "blocks/*";
-@import "elements/*";
+
+@import "blocks/ask";
+@import "blocks/footer";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/single-form";
+@import "blocks/tout";
+
+@import "elements/buttons";

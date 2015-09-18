@@ -29,7 +29,7 @@ gem 'rspec', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 
 # Styleguide requirements
-gem 'hologram'
+gem 'livingstyleguide'
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.3'
