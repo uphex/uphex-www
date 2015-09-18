@@ -6,14 +6,8 @@ module UpHex
 
     register SassInitializer
 
-    register Sinatra::AssetPack
-
-    assets {
-      serve '/stylesheets', from: 'assets/stylesheets'
-      serve '/images'     , from: 'assets/images'
-
-      css :application, ['stylesheets/application.css']
-    }
+    register Padrino::Sprockets
+    sprockets
 
     enable :sessions
 

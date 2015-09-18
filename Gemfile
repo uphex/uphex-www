@@ -22,7 +22,7 @@ gem 'sass'
 gem 'bourbon'
 gem 'neat'
 gem 'sass-globbing'
-gem 'sinatra-assetpack'
+gem 'padrino-sprockets', :require => "padrino/sprockets"
 
 # Test requirements
 gem 'rspec', :group => 'test'
