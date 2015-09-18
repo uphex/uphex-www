@@ -1,20 +1,27 @@
-/ Will worry about footer later
-/ %footer.footer
-/   .medium-8.columns
-/     = link_to 'UpHex', '/', :class => 'logo'
-/     %ul
-/       %li= link_to 'terms', '/terms.html'
-/       %li= link_to 'privacy', '/privacy.html'
-/       %li.mail= mail_to 'support@uphex.com', 'support@uphex.com'
+%footer.footer
+  .container
+    = link_to 'UpHex', '/', :class => 'footer__title'
+    %ul.footer__links.footer__links--primary
+      %li.footer__link
+        = link_to 'About Us', '#', class: 'footer__anchor'
+      %li.footer__link
+        = mail_to 'support@uphex.com', 'Contact Us', class: 'footer__anchor'
+      %li.footer__link
+        = link_to 'Terms of Service', '/terms.html', class: 'footer__anchor'
+      %li.footer__link
+        = link_to 'Privacy Policy', '/privacy.html', class: 'footer__anchor'
 
-/     %p
-/       Copyright &copy; 2015 UpHex, all rights reserved.
+    %ul.footer__links.footer__links--secondary
+      %li.footer__link
+        = link_to 'Log In', 'http://app.uphex.com/sessions/new', class: 'footer__anchor'
+      %li.footer__link
+        = link_to 'Pricing & Signup', 'http://app.uphex.com/sessions/new', class: 'footer__anchor button button--inverse'
 
-/ :javascript
-/   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-/   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-/   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-/   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+:javascript
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-/   ga('create', 'UA-37548222-4', 'uphex.com');
-/   ga('send', 'pageview');
+  ga('create', 'UA-37548222-4', 'uphex.com');
+  ga('send', 'pageview');

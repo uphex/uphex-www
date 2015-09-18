@@ -3,11 +3,8 @@
  */
 
 .container {
+  position: relative;
   padding: $gutter / 2;
-
-  @include media($breakpoint-medium) {
-    padding: $gutter / 2;
-  }
   @include outer-container;
 }
 

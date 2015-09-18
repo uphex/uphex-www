@@ -1,0 +1,69 @@
+/*doc
+---
+title: Footer
+name: footer
+category: layout
+---
+```html_example
+  <footer class="footer"></footer>
+```
+*/
+.footer {
+  text-align: center;
+  background: black;
+
+  &__title {
+    display: block;
+    margin: 20px auto;
+    width: 37px;
+    height: 42px;
+    text-indent: -9999px;
+    background: url("/images/logo-markonly-white@2x.png") no-repeat;
+    background-size: 100%;
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    line-height: 42px;
+  }
+
+  .button {
+    margin: 20px 0 0 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include media($breakpoint-medium) {
+    text-align: inherit;
+
+    &__title {
+      float: left;
+      margin: 0;
+    }
+
+    &__links {
+      position: absolute;
+
+      &--primary {
+        left: 62px;
+      }
+
+      &--secondary {
+        right: $gutter / 2;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+    }
+
+    .button {
+      margin: 0 0 0 10px;
+    }
+  }
+}
