@@ -2,12 +2,17 @@
   @include omega;
 
   @include media($breakpoint-small) {
+    @include span-columns(8);
+    @include shift(2);
+  }
+
+  @include media($breakpoint-medium) {
     @include span-columns(6);
     @include shift(3);
   }
 
   &__input {
-    @include span-columns(8);
+    @include span-columns(6);
     @include omega;
 
     &:first-child input {
@@ -19,10 +24,20 @@
       padding: $padding - 1;
       width: 100%;
     }
+
+    @include media($breakpoint-small) {
+      @include span-columns(7);
+      @include omega;
+    }
+
+    @include media($breakpoint-large) {
+      @include span-columns(8);
+      @include omega;
+    }
   }
 
   &__button {
-    @include span-columns(4);
+    @include span-columns(6);
     @include omega;
 
     &:last-child button {
@@ -31,6 +46,18 @@
 
     button {
       width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include media($breakpoint-small) {
+      @include span-columns(5);
+      @include omega;
+    }
+
+    @include media($breakpoint-large) {
+      @include span-columns(4);
+      @include omega;
     }
   }
 }

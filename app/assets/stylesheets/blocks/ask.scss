@@ -9,5 +9,14 @@ category: blocks
 ```
 */
 .ask {
+  padding: $padding 0;
   text-align: center;
+
+  @include media($breakpoint-medium) {
+    padding: $padding * 5 0;
+
+    p {
+      font-size: 20px;
+    }
+  }
 }

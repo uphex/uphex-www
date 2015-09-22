@@ -33,12 +33,13 @@ category: layout
   }
 
   .button {
-    margin: 20px 0 0 0;
+    margin: $padding 0 0 0;
     padding-top: 0;
     padding-bottom: 0;
   }
 
   @include media($breakpoint-medium) {
+    padding: $padding * 2 0;
     text-align: inherit;
 
     &__title {
@@ -60,10 +61,11 @@ category: layout
 
     &__link {
       display: inline-block;
+      margin: 0 5px;
     }
 
     .button {
-      margin: 0 0 0 10px;
+      margin: 0 0 0 5px;
     }
   }
 }

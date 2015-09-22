@@ -1,7 +1,7 @@
 /*doc
 ---
-title: Hero
-name: hero
+title: Tout
+name: tout
 category: blocks
 ---
 ```html_example
@@ -9,9 +9,10 @@ category: blocks
 ```
 */
 .tout {
+  padding: $padding 0 0;
   background: $dark-white;
 
-  h2 {
+  h1 {
     text-align: center;
   }
 
@@ -21,12 +22,18 @@ category: blocks
   }
 
   @include media($breakpoint-medium) {
+    padding: $padding * 5 0 0;
+
     &__item {
       @include span-columns(8);
 
       &--right {
         @include shift(4)
       }
+    }
+
+    p {
+      font-size: 20px;
     }
   }
 }

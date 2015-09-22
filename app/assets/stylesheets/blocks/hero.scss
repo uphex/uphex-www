@@ -11,6 +11,7 @@ category: blocks
 .hero {
   background: $black;
   color: $white;
+  text-align: center;
 
   &__text {
     line-height: 1.5;
@@ -25,6 +26,8 @@ category: blocks
   }
 
   @include media($breakpoint-medium) {
+    text-align: inherit;
+
     &__content {
       margin: $padding * 7 0;
       @include span-columns(6);
