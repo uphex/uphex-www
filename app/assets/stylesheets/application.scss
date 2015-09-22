@@ -1,31 +1,33 @@
 /**
  * Variables
  */
+
 @import "variables";
 
 /**
  * Gems
  */
+
 @import "bourbon";
 @import "neat";
 
 /**
  * Reset
  */
-@import "normalize";
+
+@import "lib/normalize";
 
 /**
  * uphex-www
  */
-@import "base";
-@import "typography";
+
+@import "elements/base";
+@import "elements/buttons";
 
 @import "blocks/ask";
+@import "blocks/container";
 @import "blocks/footer";
 @import "blocks/header";
 @import "blocks/hero";
 @import "blocks/single-form";
 @import "blocks/tout";
-
-@import "elements/buttons";
-@import "elements/form";

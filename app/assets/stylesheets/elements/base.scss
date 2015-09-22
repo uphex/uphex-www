@@ -1,3 +1,18 @@
+/**
+ * Root elements
+ */
+
+body {
+  color: $black;
+  font-family: 'open sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Type elements
+ */
+
 h1 {
   margin: 0 0 $padding * 2;
   font-size: 30px;
@@ -29,4 +44,20 @@ h3 {
 
 p {
   margin: 0 0 $padding * 2;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+/**
+ * Form elements
+ */
+
+input {
+  background: $white;
+  border: 1px solid $light-black;
+  border-radius: $radius;
+  color: $black;
 }

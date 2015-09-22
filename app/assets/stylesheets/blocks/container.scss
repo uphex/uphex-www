@@ -1,0 +1,16 @@
+/*doc
+---
+title: Container
+name: container
+category: layout
+---
+```html_example
+  <div class="footer"></div>
+```
+*/
+
+.container {
+  position: relative;
+  padding: $gutter / 2;
+  @include outer-container();
+}
