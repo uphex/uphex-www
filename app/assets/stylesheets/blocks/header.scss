@@ -30,4 +30,8 @@ category: layout
     font-weight: 700;
     line-height: 42px;
   }
+
+  @include media($breakpoint-medium) {
+    padding: $padding 0;
+  }
 }

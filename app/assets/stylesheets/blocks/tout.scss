@@ -10,21 +10,26 @@ category: blocks
 */
 .tout {
   padding: $padding 0 0;
-  background: $dark-white;
+  text-align: center;
 
-  h1 {
-    text-align: center;
+  h3 {
+    margin-bottom: $padding;
   }
 
-  &__item {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  @include media($breakpoint-small) {
+    text-align: left;
+
+    h1 {
+      text-align: center;
+    }
   }
 
   @include media($breakpoint-medium) {
     padding: $padding * 5 0 0;
 
     &__item {
+      margin-top: $padding * 3;
+      margin-bottom: $padding * 3;
       @include span-columns(8);
 
       &--right {

@@ -29,7 +29,7 @@ category: blocks
     text-align: inherit;
 
     &__content {
-      margin: $padding * 7 0;
+      margin: $padding * 6 0;
       @include span-columns(6);
     }
 
