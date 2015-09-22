@@ -1,6 +1,11 @@
 %footer.footer
   .container
     = link_to 'UpHex', '/', :class => 'footer__title'
+    %ul.footer__links.footer__links--secondary
+      %li.footer__link.footer__buttonwrap
+        = link_to 'Pricing & Signup', 'http://app.uphex.com/sessions/new', class: 'footer__anchor button button--green'
+      %li.footer__link
+        = link_to 'Log In', 'http://app.uphex.com/sessions/new', class: 'footer__anchor'
     %ul.footer__links.footer__links--primary
       %li.footer__link
         = link_to 'About Us', '#', class: 'footer__anchor'
@@ -10,12 +15,6 @@
         = link_to 'Terms of Service', '/terms.html', class: 'footer__anchor'
       %li.footer__link
         = link_to 'Privacy Policy', '/privacy.html', class: 'footer__anchor'
-
-    %ul.footer__links.footer__links--secondary
-      %li.footer__link
-        = link_to 'Log In', 'http://app.uphex.com/sessions/new', class: 'footer__anchor'
-      %li.footer__link
-        = link_to 'Pricing & Signup', 'http://app.uphex.com/sessions/new', class: 'footer__anchor button button--green'
 
 :javascript
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
