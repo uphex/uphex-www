@@ -10,11 +10,17 @@ category: elements
 */
 .button {
   display: inline-block;
-  padding: 10px;
+  padding: $padding $padding * 2;
   border: none;
-  background: #000;
-  color: #fff;
+  border-radius: $radius;
+  background: $black;
+  color: $white;
+  font-weight: 700;
   @include appearance(none);
+
+  &:hover {
+    background: lighten($black, 5%);
+  }
 
   &--expand {
     display: block;
@@ -25,8 +31,45 @@ category: elements
     }
   }
 
+  &--blue {
+    background: $blue;
+
+    &:hover {
+      background: lighten($blue, 5%);
+    }
+  }
+
+  &--green {
+    background: $green;
+
+    &:hover {
+      background: lighten($green, 5%);
+    }
+  }
+
+  &--red {
+    background: $red;
+
+    &:hover {
+      background: lighten($red, 5%);
+    }
+  }
+
+  &--yellow {
+    background: $yellow;
+    color: $black;
+
+    &:hover {
+      background: lighten($yellow, 5%);
+    }
+  }
+
   &--inverse {
-    background: #fff;
-    color: #000;
+    background: $white;
+    color: $black;
+
+    &:hover {
+      background: darken($white, 5%);
+    }
   }
 }

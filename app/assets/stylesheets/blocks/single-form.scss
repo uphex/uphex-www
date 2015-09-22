@@ -10,15 +10,24 @@
     @include span-columns(8);
     @include omega;
 
+    &:first-child input {
+      border-radius: $radius 0 0 $radius;
+      border-right: 0;
+    }
+
     input {
-      padding: 8px;
+      padding: $padding - 1;
       width: 100%;
     }
   }
 
   &__button {
-    @include omega;
     @include span-columns(4);
+    @include omega;
+
+    &:last-child button {
+      border-radius: 0 $radius $radius 0;
+    }
 
     button {
       width: 100%;

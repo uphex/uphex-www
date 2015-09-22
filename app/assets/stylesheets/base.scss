@@ -2,6 +2,12 @@
  * Universal elements, like containers
  */
 
+body {
+  color: $black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .container {
   position: relative;
   padding: $gutter / 2;
@@ -13,6 +19,6 @@
  */
 
 a {
-  color: #fff;
+  color: $white;
   text-decoration: none;
 }

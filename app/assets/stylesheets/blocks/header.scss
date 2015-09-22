@@ -9,7 +9,7 @@ category: layout
 ```
 */
 .header {
-  background: black;
+  background: $black;
 
   &__title {
     margin: 0;
@@ -27,6 +27,7 @@ category: layout
 
   &__link {
     float: right;
+    font-weight: 700;
     line-height: 42px;
   }
 }
