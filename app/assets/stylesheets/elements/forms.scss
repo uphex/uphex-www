@@ -1,0 +1,11 @@
+.input {
+  padding: ($padding - 2) $padding;
+  background: $white;
+  border: 2px solid $light-black;
+  border-radius: $radius;
+  color: $black;
+
+  &--green {
+    border-color: $green;
+  }
+}
