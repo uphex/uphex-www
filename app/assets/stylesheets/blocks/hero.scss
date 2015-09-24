@@ -1,10 +1,76 @@
 .hero {
-  background: $black;
   position: relative;
   height: auto;
   padding: $padding 0;
+  background: $black;
   color: $white;
   text-align: center;
+
+  &__text {
+    line-height: 1.5;
+  }
+
+  &__email-graphic {
+    background: $white;
+    border-radius: $radius;
+  }
+
+  &--white {
+    background: $white;
+    color: $black;
+
+    &.hero--slant {
+      &:before,
+      &:after {
+        background: $white;
+      }
+    }
+  }
+
+  &--blue {
+    background: $blue;
+
+    &.hero--slant {
+      &:before,
+      &:after {
+        background: $blue;
+      }
+    }
+  }
+
+  &--green {
+    background: $green;
+
+    &.hero--slant {
+      &:before,
+      &:after {
+        background: $green;
+      }
+    }
+  }
+
+  &--red {
+    background: $red;
+
+    &.hero--slant {
+      &:before,
+      &:after {
+        background: $red;
+      }
+    }
+  }
+
+  &--yellow {
+    background: $yellow;
+    color: $black;
+
+    &.hero--slant {
+      &:before,
+      &:after {
+        background: $yellow;
+      }
+    }
+  }
 
   &--slant {
     padding: $padding * 2 0;
@@ -40,15 +106,6 @@
         top: $padding * 2;
       }
     }
-  }
-
-  &__text {
-    line-height: 1.5;
-  }
-
-  &__email-graphic {
-    background: $white;
-    border-radius: $radius;
   }
 
   @include media($breakpoint-small) {
