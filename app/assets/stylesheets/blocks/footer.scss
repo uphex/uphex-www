@@ -1,4 +1,5 @@
 .footer {
+  padding: $padding 0;
   text-align: center;
   background: $black;
 
@@ -13,12 +14,13 @@
   }
 
   &__links {
-    margin: 0;
+    margin: 0 -5px;
     padding: 0;
     list-style: none;
   }
 
   &__link {
+    font-size: 14px;
     line-height: 42px;
   }
 
@@ -26,6 +28,10 @@
     margin: $padding 0;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  @include media($breakpoint-small) {
+    padding: 0;
   }
 
   @include media($breakpoint-medium) {
@@ -41,11 +47,11 @@
       position: absolute;
 
       &--primary {
-        left: 62px;
+        left: 42px + $padding * 3;
       }
 
       &--secondary {
-        right: $gutter / 2;
+        right: $padding * 2;
       }
     }
 
