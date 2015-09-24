@@ -22,7 +22,7 @@
     text-align: inherit;
 
     &__content {
-      padding: $padding * 3 0;
+      padding: $padding * 2 0 0;
       @include span-columns(6);
     }
 
