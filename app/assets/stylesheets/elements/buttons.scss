@@ -21,6 +21,15 @@
     }
   }
 
+  &--white {
+    background: $white;
+    color: $black;
+
+    &:hover {
+      background: darken($white, 5%);
+    }
+  }
+
   &--blue {
     background: $blue;
 
@@ -51,15 +60,6 @@
 
     &:hover {
       background: lighten($yellow, 5%);
-    }
-  }
-
-  &--inverse {
-    background: $white;
-    color: $black;
-
-    &:hover {
-      background: darken($white, 5%);
     }
   }
 }
