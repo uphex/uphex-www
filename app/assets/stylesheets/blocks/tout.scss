@@ -20,9 +20,27 @@
     &__item {
       margin-top: $padding * 3;
       margin-bottom: $padding * 3;
-      @include span-columns(8);
+
+      &-row {
+        overflow: hidden;
+
+        &:last-of-type {
+          margin-bottom: $padding * 2;
+        }
+
+        .tout__item {
+          @include span-columns(6);
+          margin-top: $padding;
+          margin-bottom: $padding;
+        }
+      }
+
+      &--left {
+        @include span-columns(8);
+      }
 
       &--right {
+        @include span-columns(8);
         @include shift(4)
       }
     }
