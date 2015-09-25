@@ -1,0 +1,22 @@
+.input-tower {
+  margin-bottom: $padding * 2;
+
+  input {
+    width: 100%;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-color: $dark-white;
+    border-radius: 0;
+
+    &:first-of-type {
+      border-top-left-radius: $radius;
+      border-top-right-radius: $radius;
+    }
+
+    &:last-of-type {
+      border-bottom-width: 0;
+      border-bottom-left-radius: $radius;
+      border-bottom-right-radius: $radius;
+    }
+  }
+}

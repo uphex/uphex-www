@@ -18,12 +18,20 @@
     font-size: 14px;
   }
 
+  &--expand {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
   &--expand-on-small {
     display: block;
+    width: 100%;
     text-align: center;
 
     @include media($breakpoint-small) {
       display: inline-block;
+      width: auto;
     }
   }
 
