@@ -24,11 +24,6 @@
     line-height: 42px;
   }
 
-  .button {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
   @include media($breakpoint-medium) {
     padding: $padding * 2 0;
     text-align: inherit;
@@ -60,7 +55,7 @@
     }
 
     .button {
-      margin: 0 0 0 10px;
+      margin: 0 0 0 5px;
     }
   }
 }
