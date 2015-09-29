@@ -6,6 +6,10 @@
   color: $black;
   outline: 0;
 
+  &--black {
+    border-color: $black;
+  }
+
   &--blue {
     border-color: $blue;
   }
