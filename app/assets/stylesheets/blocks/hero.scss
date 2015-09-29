@@ -118,6 +118,14 @@
 
   @include media($breakpoint-small) {
     padding: $padding * 2 0;
+
+    &__price-chart {
+      @include span-columns(6);
+    }
+
+    &__form {
+      @include span-columns(6);
+    }
   }
 
   @include media($breakpoint-medium) {
