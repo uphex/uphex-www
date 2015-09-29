@@ -2,4 +2,6 @@
   .container
     %h1.header__title
       = link_to 'UpHex', '/'
-    = link_to 'Log In', 'http://app.uphex.com/sessions/new', class: 'header__link'
+    %ul.header__links
+      %li.header__link
+        = link_to 'Log In', 'http://app.uphex.com/sessions/new'

@@ -16,10 +16,22 @@
     }
   }
 
-  &__link {
+  &__links {
+    margin: 0 -10px;
+    padding: 0;
     float: right;
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 0 10px;
     font-weight: 700;
     line-height: 42px;
+  }
+
+  .button {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @include media($breakpoint-large) {

@@ -26,6 +26,9 @@
 
   .button {
     margin: 0 0 $padding;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
   }
 
   @include media($breakpoint-medium) {
