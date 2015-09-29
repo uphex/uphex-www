@@ -28,9 +28,6 @@ gem 'padrino-sprockets', :require => "padrino/sprockets"
 gem 'rspec', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 
-# Styleguide requirements
-gem 'livingstyleguide'
-
 # Padrino Stable Gem
 gem 'padrino', '0.11.3'
 

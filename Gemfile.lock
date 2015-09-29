@@ -10,23 +10,14 @@ GEM
     diff-lcs (1.2.4)
     haml (4.0.3)
       tilt
-    hooks (0.3.3)
     http_router (0.11.0)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     i18n (0.6.4)
-    livingstyleguide (1.2.2)
-      hooks (= 0.3.3)
-      minisyntax
-      redcarpet (~> 3.0.0)
-      sass
-      thor
-      tilt
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
-    minisyntax (0.2.5)
     multi_json (1.7.7)
     neat (1.7.2)
       bourbon (>= 4.0)
@@ -69,7 +60,6 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.1.0)
-    redcarpet (3.0.0)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -102,7 +92,6 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   haml
-  livingstyleguide
   neat
   padrino (= 0.11.3)
   padrino-sprockets
@@ -112,6 +101,3 @@ DEPENDENCIES
   sass
   sass-globbing
   sinatra
-
-BUNDLED WITH
-   1.10.6
