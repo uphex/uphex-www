@@ -5,7 +5,7 @@
 
   &__title {
     display: block;
-    margin: 20px auto;
+    margin: $padding auto $padding * 2;
     width: 37px;
     height: 42px;
     text-indent: -9999px;
@@ -22,6 +22,10 @@
   &__link {
     font-size: 14px;
     line-height: 42px;
+  }
+
+  .button {
+    margin: 0 0 $padding;
   }
 
   @include media($breakpoint-medium) {
