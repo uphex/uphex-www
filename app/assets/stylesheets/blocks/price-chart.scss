@@ -1,8 +1,10 @@
 .price-chart {
+  margin: $padding 0;
   border-radius: $radius;
-  text-align: left;
 
   &__heading {
+    padding: 0;
+
     strong {
       font-weight: 400;
       font-size: 20px;
@@ -16,12 +18,20 @@
 
   &__features {
     list-style: none;
-    margin: 0 0 $padding * 2;
     padding: 0;
+    margin: 0;
   }
 
   &__feature {
     margin: 0 0 $padding;
+  }
+
+  @include media($breakpoint-small) {
+    text-align: left;
+
+    &__features {
+      margin: 0 0 $padding * 2;
+    }
   }
 
   @include media($breakpoint-medium) {
