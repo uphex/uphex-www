@@ -145,19 +145,28 @@
       height: 400px;
     }
 
-    &__form {
-      @include span-columns(4);
+    &__price-chart {
+      @include span-columns(5);
+      @include shift(1);
     }
 
-    &__price-chart {
-      @include span-columns(4);
-      @include shift(2);
+    &__form {
+      @include span-columns(5);
     }
   }
 
   @include media($breakpoint-large) {
     &__content {
       padding: $padding * 3 0;
+    }
+
+    &__price-chart {
+      @include span-columns(4);
+      @include shift(2);
+    }
+
+    &__form {
+      @include span-columns(4);
     }
   }
 }
