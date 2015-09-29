@@ -6,6 +6,10 @@
   color: $white;
   text-align: center;
 
+  &__single-heading {
+    text-align: center;
+  }
+
   &__text {
     line-height: 1.5;
   }
@@ -17,11 +21,6 @@
 
   &__form {
     margin: 0 0 $padding * 2;
-  }
-
-  &__pricing {
-    background: $white;
-    border-radius: $radius;
   }
 
   &--white {
@@ -125,6 +124,10 @@
     padding: $padding * 3 0;
     text-align: inherit;
 
+    &__single-heading {
+      padding-bottom: $padding * 2;
+    }
+
     &__content {
       padding: $padding * 2 0 0;
       @include span-columns(6);
@@ -146,10 +149,9 @@
       @include span-columns(4);
     }
 
-    &__pricing {
-      height: 400px;
-      @include span-columns(6);
-      @include shift(1);
+    &__price-chart {
+      @include span-columns(4);
+      @include shift(2);
     }
   }
 
