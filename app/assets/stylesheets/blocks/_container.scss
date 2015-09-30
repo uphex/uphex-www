@@ -1,3 +1,13 @@
+/**
+ * CONTAINER
+
+ * A special block used to constrain the contents inside it to a max-width.
+ * This block should never be extended with elements or modifiers; it's
+ * just a layout helper to children don't stretch the entire width of the
+ * browser on large screens.
+ */
+
+
 .container {
   position: relative;
   overflow: hidden;
