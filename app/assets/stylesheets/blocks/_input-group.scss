@@ -1,12 +1,12 @@
 /**
- * SINGLE FORM
+ * INPUT GROUP
 
  * Aligns and modifies the appearance of a single input and a single
  * button together
  */
 
 
-.single-form {
+.input-group {
   @include omega;
 
   @include media($breakpoint-small) {
