@@ -1,32 +1,46 @@
 /**
- * Neat
+ * VARIABLES
+
+ * Variables that modify behavior of our Gems or used by our component
+ */
+
+/**
+ * Neat Overrides
  */
 $border-box-sizing: true !global;
 
 /**
  * Sizes
  */
-$padding: 15px;
-$radius: 3px;
+$padding : 15px;
+$radius  : 3px;
 
 /**
  * Responsive Breakpoints
+
+ * These are used with Bourbon's media query mixin to help with our
+ * mobile-first development
+ * ex: @include media($breakpoint-small)
  */
 
-$breakpoint-small: min-width 36em;      // Landscape phone and up (576px)
-$breakpoint-medium: min-width 48em;     // Tablet and up (768px)
-$breakpoint-large: min-width 62em;      // Desktop and up (992px)
-$breakpoint-extralarge: min-width 75em; // Bigger desktop and up (1200px)
+$breakpoint-small      : min-width 36em; // Landscape phone and up (576px)
+$breakpoint-medium     : min-width 48em; // Tablet and up (768px)
+$breakpoint-large      : min-width 62em; // Desktop and up (992px)
+$breakpoint-extralarge : min-width 75em; // Bigger desktop and up (1200px)
 
 /**
  * Colors
+
+ * These are directly from UpHex branding. There should be almost no
+ * reason to add more variables here. Instead, modify existing ones by
+ * using SASS functions to darken, lighten and mix colors for your purposes.
  */
 
-$black: #23272b;
-$light-black: #5e7388;
-$dark-white: #edf2f7;
-$white: #fff;
-$blue: #2781ef;
-$green: #24cc6b;
-$red: #d73333;
-$yellow: #f5e139;
+$black       : #23272b;
+$light-black : #5e7388;
+$dark-white  : #edf2f7;
+$white       : #fff;
+$blue        : #2781ef;
+$green       : #24cc6b;
+$red         : #d73333;
+$yellow      : #f5e139;

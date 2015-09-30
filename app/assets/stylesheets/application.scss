@@ -1,24 +1,52 @@
 /**
+ * APPLICATION
+
+ • This is the entrypoint for all UpHex styles and should be the only
+ * stylesheet in this directory linked in a template
+ */
+
+/**
  * Variables
+
+ * We include these first as some variables in Gems are modified
  */
 
 @import "variables";
 
 /**
  * Gems
+
+ * Bourbon is a set of helpers for SASS that makes development faster
+ * http://bourbon.io/
+
+ * Neat is an extension of Bourbon that helps with creating grid layouts
+ * http://neat.bourbon.io/
  */
 
 @import "bourbon";
 @import "neat";
 
 /**
- * Reset
+ * Libraries
+
+ * Normalize provides a sane reset for default/browser styles
+ * https://necolas.github.io/normalize.css/
  */
 
 @import "lib/normalize";
 
 /**
  * uphex-www
+
+ * All of our custom SCSS for UpHex websites whether it's a marketing
+ * website or an app.
+
+ * Since declarations and classes are written with the BEM methodology,
+ * the directory structure is loosely based on how BEM is organized.
+ * https://en.bem.info/method/definitions/
+
+ * Styles are imported to create an ideal specifity graph for development
+ * http://csswizardry.com/2014/10/the-specificity-graph/
  */
 
 @import "elements/base";
