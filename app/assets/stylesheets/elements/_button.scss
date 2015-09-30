@@ -22,6 +22,12 @@
     background: lighten($black, 5%);
   }
 
+  &--disabled,
+  &[disabled],
+  &:disabled {
+    background: lighten($black, 50%);
+  }
+
   &--small {
     padding: 0 $padding;
     font-size: 14px;
@@ -56,6 +62,16 @@
   &--blue {
     background: $blue;
 
+    &.button--disabled,
+    &[disabled],
+    &:disabled {
+      background: lighten($blue, 20%);
+
+      &:hover {
+        background: lighten($blue, 20%);
+      }
+    }
+
     &:hover {
       background: lighten($blue, 5%);
     }
@@ -63,6 +79,16 @@
 
   &--green {
     background: $green;
+
+    &.button--disabled,
+    &[disabled],
+    &:disabled {
+      background: lighten($green, 20%);
+
+      &:hover {
+        background: lighten($green, 20%);
+      }
+    }
 
     &:hover {
       background: lighten($green, 5%);
@@ -72,6 +98,16 @@
   &--red {
     background: $red;
 
+    &.button--disabled,
+    &[disabled],
+    &:disabled {
+      background: lighten($red, 20%);
+
+      &:hover {
+        background: lighten($red, 20%);
+      }
+    }
+
     &:hover {
       background: lighten($red, 5%);
     }
@@ -80,6 +116,17 @@
   &--yellow {
     background: $yellow;
     color: $black;
+
+    &.button--disabled,
+    &[disabled],
+    &:disabled {
+      background: lighten($yellow, 20%);
+      color: $white;
+
+      &:hover {
+        background: lighten($yellow, 20%);
+      }
+    }
 
     &:hover {
       background: lighten($yellow, 5%);
