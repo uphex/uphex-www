@@ -1,10 +1,10 @@
 /**
  * CONTAINER
 
- * A special block used to constrain the contents inside it to a max-width.
- * This block should never be extended with elements or modifiers; it's
- * just a layout helper to children don't stretch the entire width of the
- * browser on large screens.
+ * A special block used to constrain the contents inside it to provide
+ * horizontal gutter space at large resolutions. They also act as "rows"
+ * that you may be familiar with in Bootstrap or Foundation grid systems.
+ * This block should never be extended with elements or modifiers.
  */
 
 

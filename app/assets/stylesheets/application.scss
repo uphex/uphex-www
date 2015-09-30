@@ -49,10 +49,24 @@
  * http://csswizardry.com/2014/10/the-specificity-graph/
  */
 
+/**
+ * Elements
+
+ * Styles that target elements or very generic classes, such as .input or
+ * .button
+*/
+
 @import "elements/base";
 @import "elements/button";
 @import "elements/form";
 @import "elements/type";
+
+/**
+ * Blocks
+
+ * Blocks that follow the MED methodlogy. Meaning most of these contain
+ * elements and modifiers beneath them, though can also contain other blocks.
+ */
 
 @import "blocks/ask";
 @import "blocks/container";
