@@ -18,6 +18,7 @@ gem 'rake'
 
 # Component requirements
 gem 'haml'
+gem 'redcarpet'
 gem 'sass'
 gem 'bourbon'
 gem 'neat'
