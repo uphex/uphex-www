@@ -18,6 +18,13 @@
     color: $green;
   }
 
+  &__icon {
+    display: block;
+    width: 100%;
+    margin: $padding auto;
+    max-width: 100px;
+  }
+
   @include media($breakpoint-small) {
     text-align: left;
 
@@ -47,18 +54,53 @@
         }
       }
 
-      &--left {
-        @include span-columns(8);
+      &--icon-left {
+        @include outer-container;
+
+        &__content {
+          @include span-columns(8);
+        }
       }
 
-      &--right {
-        @include span-columns(8);
-        @include shift(4)
+      &--icon-right {
+        @include outer-container;
+
+        .tout__icon-wrap {
+          float: right !important;
+        }
+
+        &__content {
+          @include span-columns(8);
+        }
       }
+
+      .tout__icon-wrap {
+        @include span-columns(4);
+      }
+    }
+
+    &__icon-wrap {
+      @include span-columns(4);
+    }
+
+    &__icon {
+      margin: 0 auto $padding * 2;
+      max-width: 180px;
     }
 
     p {
       font-size: 20px;
+    }
+  }
+
+  @include media($breakpoint-large) {
+    &__item {
+      margin-top: $padding * 4;
+      margin-bottom: $padding * 4;
+
+      &:last-of-type {
+        margin-bottom: $padding * 3;
+      }
     }
   }
 }
