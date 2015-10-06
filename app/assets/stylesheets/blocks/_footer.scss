@@ -30,6 +30,10 @@
   &__link {
     font-size: 14px;
     line-height: 42px;
+
+    a {
+      color: $white;
+    }
   }
 
   .button {
