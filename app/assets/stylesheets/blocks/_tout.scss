@@ -23,6 +23,10 @@
     width: 100%;
     margin: $padding auto;
     max-width: 100px;
+
+    .tout__item--icon-center & {
+      max-width: 200px;
+    }
   }
 
   @include media($breakpoint-small) {
@@ -54,8 +58,24 @@
         }
       }
 
+      &--icon-center {
+        margin-top: 0 !important;
+        text-align: center;
+
+        @include span-columns(8);
+        @include shift(2);
+
+        .tout__icon {
+          max-width: 400px;
+        }
+      }
+
       &--icon-left {
         @include outer-container;
+
+        .tout__icon-wrap {
+          @include span-columns(4);
+        }
 
         &__content {
           @include span-columns(8);
@@ -66,6 +86,7 @@
         @include outer-container;
 
         .tout__icon-wrap {
+          @include span-columns(4);
           float: right !important;
         }
 
@@ -73,14 +94,6 @@
           @include span-columns(8);
         }
       }
-
-      .tout__icon-wrap {
-        @include span-columns(4);
-      }
-    }
-
-    &__icon-wrap {
-      @include span-columns(4);
     }
 
     &__icon {
