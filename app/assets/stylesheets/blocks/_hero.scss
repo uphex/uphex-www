@@ -5,15 +5,6 @@
  * marketing messages or important call-to-actions
  */
 
- @include keyframes(scroll-graphic) {
-   from {
-     @include transform(translateY(0));
-   }
-   to {
-     @include transform(translateY(-100%));
-   }
- }
-
 .hero {
   position: relative;
   height: auto;
@@ -30,18 +21,8 @@
     line-height: 1.5;
   }
 
-  &__graphic {
-    overflow: hidden;
-    margin: $padding * 2 0 0;
-    max-height: 180px;
-    background: $white;
-    border-radius: $radius;
-  }
-
-  &__email-graphic {
-    width: calc(100% + 2px);
-    margin-left: -1px;
-    @include animation(scroll-graphic 40s linear)
+  .graphic {
+    display: none;
   }
 
   &__form {
@@ -170,12 +151,6 @@
       font-size: 20px;
     }
 
-    &__graphic {
-      @include span-columns(6);
-      max-height: 400px;
-      margin: 0;
-    }
-
     &__price-chart {
       @include span-columns(5);
       @include shift(1);
@@ -183,6 +158,10 @@
 
     &__form {
       @include span-columns(5);
+    }
+
+    .graphic {
+      @include span-columns(6);
     }
   }
 

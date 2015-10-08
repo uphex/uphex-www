@@ -4,8 +4,14 @@
       %h1.hero__heading Smart Reports For Growing Businesses
       %p.hero__text Spreadsheets are time consuming. Dashboards are confusing. Get insights delivered to your inbox with UpHex.
       = link_to 'Pricing & Signup', 'http://app.uphex.com/users/new', class: 'button button--green button--expand-on-small u-center'
-    .hero__graphic
-      %img.hero__email-graphic(src='/assets/report-for-hero.png')
+    .graphic.graphic--report
+      .graphic__header
+        .graphic__header-info
+          %p.graphic__header-sender UpHex Report
+          %p.graphic__header-receiver
+            %span to
+            %span John Doe
+        %p.graphic__header-avatar
 
 %section.tout
   .container
