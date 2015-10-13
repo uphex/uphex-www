@@ -43,6 +43,8 @@
     &__item {
       margin-top: $padding * 3;
       margin-bottom: $padding * 3;
+      @include display(flex);
+      @include align-items(center);
 
       &-row {
         overflow: hidden;
@@ -87,13 +89,17 @@
 
         .tout__icon-wrap {
           @include span-columns(4);
-          float: right !important;
+          @include order(1);
         }
 
         &__content {
           @include span-columns(8);
         }
       }
+    }
+
+    &__icon-wrap {
+      @include flex-shrink(0);
     }
 
     &__icon {
