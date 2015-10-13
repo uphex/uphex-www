@@ -23,6 +23,11 @@
       background: url("/assets/logo-white@2x.png") no-repeat;
       background-size: 100%;
     }
+
+    &--single {
+      float: none;
+      text-align: center;
+    }
   }
 
   &__links {
