@@ -13,9 +13,10 @@
   &__title {
     margin: 0;
     float: left;
+    line-height: 0;
 
     a {
-      display: block;
+      display: inline-block;
       width: 128px;
       height: 42px;
       text-indent: -9999px;
