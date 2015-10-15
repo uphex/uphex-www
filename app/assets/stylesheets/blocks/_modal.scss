@@ -1,0 +1,39 @@
+/**
+ * MODAL
+
+ * A block for a modal window that appears above the rest of the app
+
+ * Note: The body element will have a modifier applied to it when a
+ * modal is activated through JavaScript to assist this block.
+ */
+
+.modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+
+  &__content {
+    position: relative;
+    border-radius: $radius;
+    background: $white;
+    z-index: 9999;
+  }
+
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba($black, 0.8);
+  }
+}
