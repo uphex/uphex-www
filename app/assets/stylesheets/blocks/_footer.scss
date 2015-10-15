@@ -11,16 +11,6 @@
   text-align: center;
   background: $black;
 
-  &__title {
-    display: block;
-    margin: $padding auto $padding * 2;
-    width: 37px;
-    height: 42px;
-    text-indent: -9999px;
-    background: url("/assets/logo-markonly-white@2x.png") no-repeat;
-    background-size: 100%;
-  }
-
   &__links {
     margin: 0 -5px;
     padding: 0;
@@ -36,6 +26,10 @@
     }
   }
 
+  .logo {
+    margin: $padding auto $padding * 2;
+  }
+
   .button {
     margin: 0 0 $padding;
     padding-top: 0;
@@ -46,11 +40,6 @@
   @include media($breakpoint-medium) {
     padding: $padding * 2 0;
     text-align: inherit;
-
-    &__title {
-      float: left;
-      margin: 0;
-    }
 
     &__links {
       position: absolute;
@@ -71,6 +60,11 @@
 
     &__buttonwrap {
       float: right;
+    }
+
+    .logo {
+      float: left;
+      margin: 0;
     }
 
     .button {
