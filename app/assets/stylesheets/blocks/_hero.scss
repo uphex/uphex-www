@@ -140,10 +140,6 @@
 
     &__form {
       @include span-columns(6);
-
-      &--single {
-        @include shift(3);
-      }
     }
   }
 
@@ -171,20 +167,10 @@
 
     &__form {
       @include span-columns(5);
-
-      &--single {
-        @include span-columns(4);
-        @include shift(4);
-      }
-
     }
 
     .graphic {
       @include span-columns(6);
-    }
-
-    &--stretch {
-      @include calc(height, "100% - 174px"); // 100% - (header + footer size)
     }
   }
 
@@ -200,10 +186,6 @@
 
     &__form {
       @include span-columns(4);
-    }
-
-    &--stretch {
-      @include calc(height, "100% - 204px"); // 100% - (header + footer size)
     }
   }
 }

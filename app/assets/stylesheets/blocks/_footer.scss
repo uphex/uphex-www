@@ -37,6 +37,12 @@
     font-size: 14px;
   }
 
+  &--center {
+    .container {
+      text-align: center;
+    }
+  }
+
   @include media($breakpoint-medium) {
     padding: $padding * 2 0;
     text-align: inherit;
@@ -69,6 +75,14 @@
 
     .button {
       margin: 0 0 0 5px;
+    }
+
+    &--center {
+      .footer__links {
+        margin: 0 auto;
+        position: relative;
+        left: inherit;
+      }
     }
   }
 }

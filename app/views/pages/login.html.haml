@@ -1,8 +1,7 @@
-%section.hero.hero--stretch
+%section.splash
   .container
-    %h1.hero__single-heading
-      = link_to 'UpHex', '/', class: 'logo'
-    .hero__form.hero__form--single
+    = link_to 'UpHex', '/', class: 'logo'
+    .splash__form
       .input-stack
         %input.input{:placeholder => 'Email'}
         %input.input{:placeholder => 'Password', :type => 'password'}
@@ -10,3 +9,13 @@
       = link_to '/', class: 'hero__text-link' do
         Don’t have an account?
         %strong Sign up
+  %footer.footer
+    %ul.footer__links.footer__links--primary
+      %li.footer__link
+        = link_to 'About Us', '#', class: 'footer__anchor'
+      %li.footer__link
+        = mail_to 'support@uphex.com', 'Contact Us', class: 'footer__anchor'
+      %li.footer__link
+        = link_to 'Terms of Service', '/terms.html', class: 'footer__anchor'
+      %li.footer__link
+        = link_to 'Privacy Policy', '/privacy.html', class: 'footer__anchor'
