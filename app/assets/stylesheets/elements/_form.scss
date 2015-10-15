@@ -1,0 +1,35 @@
+/**
+ * FORM
+
+ * Styling for form elements
+ */
+
+
+.input {
+  padding: ($padding - 1) $padding;
+  background: $white;
+  border: 2px solid $light-black;
+  border-radius: $radius;
+  color: $black;
+  outline: 0;
+
+  &--black {
+    border-color: $black;
+  }
+
+  &--blue {
+    border-color: $blue;
+  }
+
+  &--green {
+    border-color: $green;
+  }
+
+  &--red {
+    border-color: $red;
+  }
+
+  &--yellow {
+    border-color: $yellow;
+  }
+}

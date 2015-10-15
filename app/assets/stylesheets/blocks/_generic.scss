@@ -1,0 +1,15 @@
+/**
+ * GENERIC
+
+ * Used to support generic content pages, such as articles. blog posts,
+ * privacy policies, etc. with proper whitespace
+ */
+
+
+.generic {
+  padding: $padding 0;
+
+  @include media ($breakpoint-medium) {
+    padding: $padding * 2 0;
+  }
+}

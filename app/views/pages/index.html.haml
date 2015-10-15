@@ -1,60 +1,53 @@
-= partial 'shared/header'
+%section.hero.hero--slant
+  .container
+    .hero__content
+      %h1.hero__heading Smart Reports For Growing Businesses
+      %p.hero__text Spreadsheets are time consuming. Dashboards are confusing. Get insights delivered to your inbox with UpHex.
+      = link_to 'Pricing & Signup', 'http://app.uphex.com/users/new', class: 'button button--green button--expand-on-small u-center'
+    .graphic.graphic--report
+      .graphic__header
+        .graphic__header-info
+          %p.graphic__header-sender UpHex Report
+          %p.graphic__header-receiver
+            %span to
+            %span John Doe
+        %p.graphic__header-avatar
 
-%section.layout-wrap
-  .mod-intro
-    %header
-      %h1 Proactive Marketing Alerts
-      -#%h2 UpHex is analytics management for marketing agencies.
-      %h2 UpHex is the easiest way to track your marketing metrics. Get insights delivered to your inbox - automatically!
+%section.tout
+  .container
+    %h1 Better Reports = Better Results
+    .tout__item.tout__item--icon-right
+      .tout__icon-wrap
+        %img.tout__icon.fill--blue(src='/assets/window-share.svg')
+      .tout__content
+        %h3 Hassle-Free Setup
+        %p Connect your web services to UpHex with just a few clicks. That's it! Once connected, we seamlessly sync your data from across the web. Want to connect multiple accounts to UpHex? No problem! We intuitively link related accounts so all your metrics are grouped correctly.
+    .tout__item.tout__item--icon-left
+      .tout__icon-wrap
+        %img.tout__icon.fill--yellow(src='/assets/server-lock.svg')
+      .tout__content
+        %h3 Accurate & Secure
+        %p The only thing worse than no data is bad data. We deliver the most accurate data so you can make informed decisions. And, we make sure your data is safe by using the latest security protocols.
+    .tout__item.tout__item--icon-right
+      .tout__icon-wrap
+        %img.tout__icon.fill--green(src='/assets/graph-bar-increase.svg')
+      .tout__content
+        %h3 Key Performance Indicators
+        %p Metrics only tell part of the story. KPIs provide a deeper level of insight into your business performance. We can combine metrics from any of your web services to create unique, actionable KPIs for your business.
+    .tout__item.tout__item--icon-center
+      .tout__icon-wrap
+        %img.tout__icon(src='/assets/integrations-graphic.png')
+      .tout__content
+        %h3 All Your Metrics Together
+        %p Tired of checking multiple dashboards throughout the day? Get a holistic view of your business by combining all your metrics together. You'll be able to see your social media metrics next to your website analytics next to your online store results.
 
-    %ul
-      -# %li= link_to 'see our plans', '#', :class => 'button blue'
-      %li= link_to 'sign up for alpha', 'http://app.uphex.com/users/new', :class => 'button green'
 
-  .mod-services
-    %header
-      %h2 Set It And Forget It
-      %p UpHex requires almost no effort. Connect your web accounts with a couple clicks, then sit back and relax. We'll alert you when there's interesting activity in one of your metrics.  
-
-    %ul
-      %li= link_to 'Google Analytics', '#', :class => 'google'
-      %li= link_to 'Facebook', '#', :class => 'facebook'
-      -# %li= link_to 'PayPal', '#', :class => 'paypal'
-      -# %li= link_to 'Amazon', '#', :class => 'amazon'
-      -# %li= link_to 'YouTube', '#', :class => 'youtube'
-      -# %li= link_to 'Shopify', '#', :class => 'shopify'
-      %li.last-child= link_to 'Twitter', '#', :class => 'twitter'
-
-  .mod-features
-    %header
-      %h2 Features
-      -#%p See your clients' metrics like never before. UpHex gives you simple, yet powerful tools for analytics management.
-
-    %ul
-      %li.cog
-        %h3 Easy Setup
-        %p Get started in under 5 minutes. Simply connect your accounts, and we'll take care of everything else. 
-
-      %li.monitoring
-        %h3 Smart Monitoring
-        %p No customization required. Our sophisticated models intelligently adapt to your unique data.
-
-      %li.alerts
-        %h3 Relevant Alerts
-        %p Right place at the right time. We'll alert you when there's activity that deserves your attention.
-
-  .mod-thoughts
-    %h2 Thoughts
-
-    %ul
-      %li
-        %blockquote Sophisticated analytics can substantially improve decision making, minimize risks, and unearth valuable insights that would otherwise remain hidden.
-        %footer
-          McKinsey Global Institute
-          %span Big Data: The next frontier for innovation, competition, and productivity
-
-      %li
-        %blockquote There is growing quantifiable evidence that data-driven decision making enabled by business analytics solutions provides a competitive difference.
-        %footer
-          Dan Veseet
-          %span Vice President, Business Analytics at IDC
+%section.ask.ask
+  .container
+    %h2 See For Yourself
+    %p Get a sample report sent to your inbox.
+    .input-group
+      .input-group__input
+        %input.input.input--black{:placeholder => 'Email'}
+      .input-group__button
+        %button.button Send Report

@@ -1,0 +1,20 @@
+/**
+ * CONTAINER
+
+ * A special block used to constrain the contents inside it to provide
+ * horizontal gutter space at large resolutions. They also act as "rows"
+ * that you may be familiar with in Bootstrap or Foundation grid systems.
+ * This block should never be extended with elements or modifiers.
+ */
+
+
+.container {
+  position: relative;
+  overflow: hidden;
+  padding: 0 $padding;
+  @include outer-container();
+
+  @include media($breakpoint-medium) {
+    padding: 0 $padding * 2;
+  }
+}

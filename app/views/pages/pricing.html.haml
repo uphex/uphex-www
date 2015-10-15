@@ -1,145 +1,42 @@
-= partial 'shared/header'
-
-%section.layout-wrap
-  .mod-plans
-    %header
-      %h1 Plans and Pricing
-      %p All Plans Come With a 30-Day Free Trial
-
-    %dl.descriptions
-      %dt Streams
-      %dd Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-      %dt Users
-      %dd Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-      %dt Live Detection
-      %dd Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-      %dt Automatic Monitoring
-      %dd Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-      %dt Realtime Notifications
-      %dd Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-      %dt 24/7 Support
-      %dd Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-    %ul
-      %li.startup
-        %h2 Startup
-
-        %dt Price
-        %dd.price
-          $49
+%section.hero.hero--slant
+  .container
+    %h1.hero__single-heading One Price. Unlimited Insights.
+    .hero__price-chart
+      .price-chart
+        %ul.price-chart__features
+          %li.price-chart__feature Continuous metric tracking
+          %li.price-chart__feature Automated reports
+          %li.price-chart__feature Unique, actionable KPIs
+          %li.price-chart__feature Unlimited connections
+          %li.price-chart__feature Direct email support
+        %p.price-chart__heading
+          %strong $249
           %span / month
+    .hero__form
+      .input-stack
+        %input.input{:placeholder => 'Name'}
+        %input.input{:placeholder => 'Email'}
+        %input.input{:placeholder => 'Password', :type => 'password'}
+      %button.button.button--green.button--expand Sign Up
 
-        %dt Trial
-        %dd.trial
-          = link_to 'Start Free Trial', '#', :class => 'button green'
-
-        %dt Streams
-        %dd.streams 3
-
-        %dt Users
-        %dd 1 user
-
-        %dt Live Detection
-        %dd.checked yes
-
-        %dt Automatic Monitoring
-        %dd.checked yes
-
-        %dt Realtime Notifications
-        %dd.checked yes
-
-        %dt 24/7 Support
-        %dd.checked yes
-
-      %li.business
-        %h2 Small Business
-
-        %dt Price
-        %dd.price
-          $149
-          %span / month
-
-        %dt Trial
-        %dd.trial
-          = link_to 'Start Free Trial', '#', :class => 'button green'
-
-        %dt Streams
-        %dd.streams 5
-
-        %dt Users
-        %dd unlimited users
-
-        %dt Live Detection
-        %dd.checked yes
-
-        %dt Automatic Monitoring
-        %dd.checked yes
-
-        %dt Realtime Notifications
-        %dd.checked yes
-
-        %dt 24/7 Support
-        %dd.checked yes
-
-      %li.enterprise
-        %h2 Enterprise
-
-        %dt Price
-        %dd.price
-          $499
-          %span / month
-
-        %dt Trial
-        %dd.trial
-          = link_to 'Start Free Trial', '#', :class => 'button green'
-
-        %dt Streams
-        %dd.streams 8
-
-        %dt Users
-        %dd unlimited users
-
-        %dt Live Detection
-        %dd.checked yes
-
-        %dt Automatic Monitoring
-        %dd.checked yes
-
-        %dt Realtime Notifications
-        %dd.checked yes
-
-        %dt 24/7 Support
-        %dd.checked yes
-
-  .mod-faq
-    %h2 "Frequently Asked Questions"
-
-    %ul
-      %li
-        %h3 How does the 30-day free trial work?
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in ante turpis. Fusce nec turpis dolor. Sed a enim eu. Lorem ipsum dolor sit amet.
-
-      %li
-        %h3 Do I have to sign a long term contract?
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in ante turpis. Fusce nec turpis dolor.
-
-      %li
-        %h3 How does the 30-day free trial work?
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in ante turpis. Fusce nec turpis dolor. Sed a enim eu. Lorem ipsum dolor sit amet.
-
-      %li
-        %h3 Do I have to sign a long term contract?
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in ante turpis. Fusce nec turpis dolor. Sed a enim eu. Lorem ipsum dolor sit amet.
-
-      %li
-        %h3 How does the 30-day free trial work?
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in ante turpis. Fusce nec turpis dolor. Sed a enim eu.
-
-      %li
-        %h3 Do I have to sign a long term contract?
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in ante turpis. Fusce nec turpis dolor.
+%section.tout
+  .container
+    %h1 Questions?
+    .tout__item-row
+      .tout__item
+        .tout__content
+          %h3 Do you offer a free trial?
+          %p No. Instead, we offer a 30-day money back guarantee. And if you want to see our service in action, you can sign up for a sample report on our homepage.
+      .tout__item
+        .tout__content
+          %h3 Is my data safe?
+          %p Absolutely! We use the latest security protocols to ensure your data is safe and sound.
+    .tout__item-row
+      .tout__item
+        .tout__content
+          %h3 How often do you send reports? When will I get my first report?
+          %p We send reports every week on Mondays. If you sign up mid-week, you will receive your first report the Monday following your first full week.
+      .tout__item
+        .tout__content
+          %h3 What web services do you integrate with?
+          %p= "UpHex works with Google Analytics, Facebook, Twitter, and Shopify...with more coming soon. Want to suggest our next integration? Send a note to #{link_to 'feedback@uphex.com', 'mailto:feedback@uphex.com'}.".html_safe

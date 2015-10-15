@@ -1,10 +1,7 @@
-%header.mod-header
-  .layout-wrap
-    %h1.logo= link_to 'UpHex', '/'
-
-    %nav
-      %ul
-        %li= link_to 'home', '/'
-        -# %li= link_to 'pricing', '/pricing.html'
-        %li= link_to 'team', '/team.html'
-        %li= link_to 'log in', 'http://app.uphex.com/sessions/new', :class => 'button blue'
+%header.header
+  .container
+    %h1.header__title
+      = link_to 'UpHex', '/'
+    %ul.header__links
+      %li.header__link
+        = link_to 'Log In', 'http://app.uphex.com/sessions/new'

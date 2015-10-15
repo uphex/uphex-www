@@ -1,0 +1,58 @@
+/**
+ * HEADER
+
+ * The first block of a page, used to display images and links you would
+ * find in a typical header
+ */
+
+
+.header {
+  padding: $padding 0;
+  background: $black;
+
+  &__title {
+    margin: 0;
+    float: left;
+    line-height: 0;
+
+    a {
+      display: inline-block;
+      width: 128px;
+      height: 42px;
+      text-indent: -9999px;
+      background: url("/assets/logo-white@2x.png") no-repeat;
+      background-size: 100%;
+    }
+
+    &--single {
+      float: none;
+      text-align: center;
+    }
+  }
+
+  &__links {
+    margin: 0 -10px;
+    padding: 0;
+    float: right;
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: 700;
+    line-height: 42px;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .button {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include media($breakpoint-large) {
+    padding: $padding * 2 0;
+  }
+}

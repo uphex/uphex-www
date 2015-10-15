@@ -1,0 +1,69 @@
+/**
+ * GRAPHIC
+
+ * A block for displaying a scrolling image in a faux-browser window.
+ * When placing inside other block you should control the sizing through
+ * that block.
+ */
+
+@include keyframes(scroll) {
+  from {
+    background-position: 0 65px;
+  }
+  to {
+    background-position: 0 -557.5px;
+  }
+}
+
+.graphic {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background: $white;
+  border-radius: $radius;
+
+  &__header {
+    position: relative;
+    overflow: hidden;
+    padding: ($padding - 5) $padding;
+    z-index: 1;
+    background: $dark-white;
+    color: $black;
+
+    p {
+      font-size: 14px;
+      padding: 0;
+    }
+
+    &-info {
+      float: left;
+    }
+
+    &-sender {
+      font-weight: 700;
+    }
+
+    &-avatar {
+      display: block;
+      float: right;
+      width: 37px;
+      height: 42px;
+      text-indent: -9999px;
+      background: url("/assets/logo-markonly-black@2x.png") no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  &--report {
+    background: url("/assets/report-for-hero.png") repeat-y;
+    background-position: 0 65px;
+    background-size: 100%;
+    @include animation(scroll 15s linear infinite);
+  }
+
+  @include media($breakpoint-medium) {
+    height: 400px;
+  }
+ }

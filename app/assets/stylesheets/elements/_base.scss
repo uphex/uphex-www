@@ -1,0 +1,17 @@
+/**
+ * BASE
+
+ * Styles for root elements that wrap and effect all other elements
+ */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  color: $black;
+  font: 16px/1.5 'open sans', 'helvetica neue', arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

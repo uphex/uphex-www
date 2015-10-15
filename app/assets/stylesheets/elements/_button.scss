@@ -1,0 +1,135 @@
+/**
+ * BUTTON
+
+ * A button class used to style anchor and button elements, with many
+ * modifiers to alter the appearance
+ */
+
+
+.button {
+  display: inline-block;
+  padding: $padding $padding * 2;
+  border: none;
+  border-radius: $radius;
+  background: $black;
+  color: $white;
+  font-size: 16px;
+  font-weight: 700;
+  outline: 0;
+  @include appearance(none);
+
+  &:hover {
+    background: lighten($black, 5%);
+  }
+
+  &--disabled,
+  &[disabled],
+  &:disabled {
+    background: lighten($black, 50%);
+  }
+
+  &--small {
+    padding: 0 $padding;
+    font-size: 14px;
+  }
+
+  &--expand {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  &--expand-on-small {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    @include media($breakpoint-small) {
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  &--white {
+    background: $white;
+    color: $black;
+
+    &:hover {
+      background: darken($white, 5%);
+    }
+  }
+
+  &--blue {
+    background: $blue;
+
+    &.button--disabled,
+    &[disabled],
+    &:disabled {
+      background: lighten($blue, 20%);
+
+      &:hover {
+        background: lighten($blue, 20%);
+      }
+    }
+
+    &:hover {
+      background: lighten($blue, 5%);
+    }
+  }
+
+  &--green {
+    background: $green;
+
+    &.button--disabled,
+    &[disabled],
+    &:disabled {
+      background: lighten($green, 20%);
+
+      &:hover {
+        background: lighten($green, 20%);
+      }
+    }
+
+    &:hover {
+      background: lighten($green, 5%);
+    }
+  }
+
+  &--red {
+    background: $red;
+
+    &.button--disabled,
+    &[disabled],
+    &:disabled {
+      background: lighten($red, 20%);
+
+      &:hover {
+        background: lighten($red, 20%);
+      }
+    }
+
+    &:hover {
+      background: lighten($red, 5%);
+    }
+  }
+
+  &--yellow {
+    background: $yellow;
+    color: $black;
+
+    &.button--disabled,
+    &[disabled],
+    &:disabled {
+      background: lighten($yellow, 20%);
+      color: $white;
+
+      &:hover {
+        background: lighten($yellow, 20%);
+      }
+    }
+
+    &:hover {
+      background: lighten($yellow, 5%);
+    }
+  }
+}

@@ -1,5 +1,4 @@
 UpHex::Web.controllers do
-  helpers ConditionalCommentsHelper
   helpers MissingTemplateHandler
 
   get "/CloudHealthCheck" do

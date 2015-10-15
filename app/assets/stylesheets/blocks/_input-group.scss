@@ -1,0 +1,70 @@
+/**
+ * INPUT GROUP
+
+ * Aligns and modifies the appearance of a single input and a single
+ * button together
+ */
+
+
+.input-group {
+  @include omega;
+
+  @include media($breakpoint-small) {
+    @include span-columns(8);
+    @include shift(2);
+  }
+
+  @include media($breakpoint-medium) {
+    @include span-columns(6);
+    @include shift(3);
+  }
+
+  &__input {
+    @include span-columns(6);
+    @include omega;
+
+    &:first-child input {
+      border-radius: $radius 0 0 $radius;
+      border-right: 0;
+    }
+
+    .input {
+      width: 100%;
+    }
+
+    @include media($breakpoint-small) {
+      @include span-columns(7);
+      @include omega;
+    }
+
+    @include media($breakpoint-large) {
+      @include span-columns(8);
+      @include omega;
+    }
+  }
+
+  &__button {
+    @include span-columns(6);
+    @include omega;
+
+    &:last-child button {
+      border-radius: 0 $radius $radius 0;
+    }
+
+    .button {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include media($breakpoint-small) {
+      @include span-columns(5);
+      @include omega;
+    }
+
+    @include media($breakpoint-large) {
+      @include span-columns(4);
+      @include omega;
+    }
+  }
+}
