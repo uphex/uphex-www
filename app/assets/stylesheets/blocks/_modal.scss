@@ -21,8 +21,11 @@
   @include justify-content(center);
 
   &__content {
+    margin: $padding;
+    padding: $padding * 2;
     position: relative;
-    border-radius: $radius;
+    border-radius: $radius * 2;
+    border: 2px solid $black;
     background: $white;
   }
 
@@ -34,5 +37,29 @@
     bottom: 0;
     left: 0;
     background: rgba($black, 0.8);
+  }
+
+  .input-group {
+    @include media($breakpoint-small) {
+      @include span-columns(12);
+      @include shift(0);
+    }
+
+    @include media($breakpoint-extralarge) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+  }
+
+  @include media($breakpoint-medium) {
+    &__content {
+      @include span-columns(8);
+    }
+  }
+
+  @include media($breakpoint-large) {
+    &__content {
+      @include span-columns(6);
+    }
   }
 }
