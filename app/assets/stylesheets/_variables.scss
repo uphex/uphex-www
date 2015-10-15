@@ -45,3 +45,15 @@ $blue        : #2781ef;
 $green       : #24cc6b;
 $red         : #d73333;
 $yellow      : #f5e139;
+
+/**
+ * Z-Indicies
+ * Using these variables should ALWAYS be used when declaring a z-index value
+ */
+
+$z-hidden  : -1;
+$z-base    : 1;
+$z-raise   : 2;
+$z-toolbar : 3;
+$z-tooltip : 4;
+$z-modal   : 5;

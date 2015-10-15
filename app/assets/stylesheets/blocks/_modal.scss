@@ -15,7 +15,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 3;
+  z-index: $z-modal;
   @include display(flex);
   @include align-items(center);
   @include justify-content(center);
@@ -24,7 +24,6 @@
     position: relative;
     border-radius: $radius;
     background: $white;
-    z-index: 9999;
   }
 
   &:before {

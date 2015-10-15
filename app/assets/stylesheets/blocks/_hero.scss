@@ -107,7 +107,7 @@
       height: 20%;
       display: block;
       background: $black;
-      z-index: -1;
+      z-index: $z-hidden;
     }
 
     &:after {
@@ -119,7 +119,7 @@
       display: block;
       background: $black;
       transform: skew(0deg, -2deg);
-      z-index: -1;
+      z-index: $z-hidden;
     }
 
     @include media($breakpoint-medium) {
