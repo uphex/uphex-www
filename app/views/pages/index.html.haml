@@ -1,24 +1,24 @@
-/ .modal
-/   .modal__content.ask
-/     .container
-/       %h2 Coming Soon
-/       %p We’re putting the final touches on our software. Enter your email to reserve a spot on our waitlist.
-/       %p
-/         %strong
-/           Bonus: you'll get 25% off for signing up early!
+#modal.modal.hidden
+  .modal__content.ask
+    .container
+      %h2 Coming Soon
+      %p We’re putting the final touches on our software. Enter your email to reserve a spot on our waitlist.
+      %p
+        %strong
+          Bonus: you'll get 25% off for signing up early!
 
-/       .input-group
-/         .input-group__input
-/           %input.input.input--black{:placeholder => 'Email'}
-/         .input-group__button
-/           %button.button Reserve Spot
+      .input-group
+        .input-group__input
+          %input.input.input--black{:placeholder => 'Email'}
+        .input-group__button
+          %button.button Reserve Spot
 
 %section.hero.hero--slant
   .container
     .hero__content
       %h1.hero__heading Smart Reports For Growing Businesses
       %p.hero__text Spreadsheets are time consuming. Dashboards are confusing. Get insights delivered to your inbox with UpHex.
-      = link_to 'Pricing & Signup', 'http://app.uphex.com/users/new', class: 'button button--green button--expand-on-small u-center'
+      = link_to 'Pricing & Signup', 'http://app.uphex.com/users/new', class: 'js-prelaunch-modal button button--green button--expand-on-small u-center'
     .graphic.graphic--report
       .graphic__header
         .graphic__header-info
