@@ -25,18 +25,28 @@ function toggleModal() {
   modal.classList.toggle('fade-in');
 }
 
+function isEmail(string) {
+  var matcher = /.+\@.+\..+/;
+  return matcher.test(string);
+}
+
 document.signup.addEventListener('submit', function(e) {
   e.preventDefault();
-  signupContent.classList.toggle('hidden');
-  signedupContent.classList.toggle('hidden');
+  if (isEmail(signupEmail.value)) {
+    signupContent.classList.toggle('hidden');
+    signedupContent.classList.toggle('hidden');
 
-  // Info to send to Customer.io
-  _cio.identify({
-    // Required attributes
-    id: signupEmail.value,                    // Unique id for the currently signed in user in your application.
-    email: signupEmail.value,                 // Email of the currently signed in user.
-    created_at: parseInt(new Date() / 1000),  // Timestamp in your system that represents when
-                                              // the user first signed up. You'll want to send it
-                                              // as seconds since the epoch.
-  });
+    // Info to send to Customer.io
+    _cio.identify({
+      // Required attributes
+      id: signupEmail.value,                    // Unique id for the currently signed in user in your application.
+      email: signupEmail.value,                 // Email of the currently signed in user.
+      created_at: parseInt(new Date() / 1000),  // Timestamp in your system that represents when
+                                                // the user first signed up. You'll want to send it
+                                                // as seconds since the epoch.
+    });
+  }
+  else {
+    document.getElementById('bad-email-message').classList.toggle('hidden');
+  }
 })
