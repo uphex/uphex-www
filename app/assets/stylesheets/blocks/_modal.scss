@@ -16,7 +16,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $z-modal;
+  z-index: $z-overlay;
   @include display(flex);
   @include align-items(center);
   @include justify-content(center);
@@ -28,6 +28,7 @@
     border-radius: $radius * 2;
     border: 2px solid $black;
     background: $white;
+    z-index: $z-modal;
   }
 
   &__close {
@@ -44,14 +45,14 @@
     line-height: $padding * 2;
   }
 
-  &:before {
-    content: '';
+  &__overlay {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: rgba($black, 0.8);
+    z-index: $z-overlay;
   }
 
   .input-group {
