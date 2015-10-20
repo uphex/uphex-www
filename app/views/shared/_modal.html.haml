@@ -1,0 +1,16 @@
+#modal.modal.hidden
+  .modal__content.ask
+    %a.js-prelaunch-modal.button.button--small.modal__close{href: '#'} ×
+    .container
+      %h2 Coming Soon
+      %p We’re putting the final touches on our software. Enter your email to reserve a spot on our waitlist.
+      %p
+        %strong
+          Bonus: you'll get 25% off for signing up early!
+
+      .input-group
+        .input-group__input
+          %input.input.input--green{:placeholder => 'Email'}
+        .input-group__button
+          %button.button.button--green Reserve Spot
+  #overlay.modal__overlay
