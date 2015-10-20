@@ -21,3 +21,8 @@ function toggleModal() {
   modal.classList.toggle('hidden');
   modal.classList.toggle('opaque');
 }
+
+document.signup.addEventListener('submit', function(e) {
+  e.preventDefault();
+  //customer io stuff goes here
+})
