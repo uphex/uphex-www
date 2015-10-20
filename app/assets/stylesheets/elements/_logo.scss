@@ -1,0 +1,21 @@
+/**
+ * LOGO
+
+ * A basic class to make an anchor element display the UpHex logo
+ */
+
+.logo {
+  display: inline-block;
+  width: 128px;
+  height: 42px;
+  text-indent: -9999px;
+  background-image: url("/assets/logo-white@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &--mark-only {
+    width: 37px;
+    height: 42px;
+    background-image: url("/assets/logo-markonly-white@2x.png");
+  }
+}

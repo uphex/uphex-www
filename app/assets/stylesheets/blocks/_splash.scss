@@ -1,0 +1,41 @@
+/**
+ * SPLASH
+
+ * A block that will usually be the only parent element on a page.
+ */
+
+.splash {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background: $black;
+  text-align: center;
+  color: $white;
+
+  .logo {
+    margin: ($padding * 2) 0;
+  }
+
+  @include media($breakpoint-medium) {
+    &__form {
+      @include span-columns(4);
+    }
+
+    .container {
+      height: 100%;
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-direction(column);
+    }
+
+    .footer__links {
+      display: inline-block;
+      margin: $padding 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+}

@@ -21,12 +21,21 @@
     line-height: 1.5;
   }
 
-  .graphic {
-    display: none;
+  &__text-link {
+    display: block;
+    margin: $padding * 2 0 0;
+    color: $white;
+    text-align: center;
+    font-size: 14px;
+    line-height: 42px;
   }
 
   &__form {
     margin: 0 0 $padding * 2;
+  }
+
+  .graphic {
+    display: none;
   }
 
   &--white {
@@ -131,10 +140,6 @@
 
     &__form {
       @include span-columns(6);
-
-      &--single {
-        @include shift(3);
-      }
     }
   }
 
@@ -162,20 +167,10 @@
 
     &__form {
       @include span-columns(5);
-
-      &--single {
-        @include span-columns(4);
-        @include shift(4);
-      }
-
     }
 
     .graphic {
       @include span-columns(6);
-    }
-
-    &--stretch {
-      @include calc(height, "100% - 174px"); // 100% - (header + footer size)
     }
   }
 
@@ -191,10 +186,6 @@
 
     &__form {
       @include span-columns(4);
-    }
-
-    &--stretch {
-      @include calc(height, "100% - 204px"); // 100% - (header + footer size)
     }
   }
 }
