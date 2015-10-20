@@ -8,6 +8,10 @@
   display: none !important;
 }
 
+.frozen {
+  overflow: hidden;
+}
+
 .fill--blue {
   fill: $blue;
 }
