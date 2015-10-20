@@ -19,4 +19,5 @@ overlay.addEventListener('click', function(e) {
 function toggleModal() {
   body.classList.toggle('frozen');
   modal.classList.toggle('hidden');
+  modal.classList.toggle('opaque');
 }
