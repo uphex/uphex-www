@@ -5,6 +5,10 @@
  */
 
 .hidden {
+  display: none !important;
+}
+
+.invisible {
   // display: none not set, so animations can still work
   visibility: hidden !important;
   z-index: $z-hidden !important;
