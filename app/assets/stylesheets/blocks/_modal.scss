@@ -30,6 +30,20 @@
     background: $white;
   }
 
+  &__close {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    display: block;
+    padding: 0;
+    width: $padding * 2;
+    height: $padding * 2;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    line-height: $padding * 2;
+  }
+
   &:before {
     content: '';
     position: fixed;
