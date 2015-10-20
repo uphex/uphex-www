@@ -33,10 +33,10 @@ document.signup.addEventListener('submit', function(e) {
   // Info to send to Customer.io
   _cio.identify({
     // Required attributes
-    id: signupEmail.value,          // Unique id for the currently signed in user in your application.
-    email: signupEmail.value,       // Email of the currently signed in user.
-    created_at: new Date() / 1000,  // Timestamp in your system that represents when
-                                    // the user first signed up. You'll want to send it
-                                    // as seconds since the epoch.
+    id: signupEmail.value,                    // Unique id for the currently signed in user in your application.
+    email: signupEmail.value,                 // Email of the currently signed in user.
+    created_at: parseInt(new Date() / 1000),  // Timestamp in your system that represents when
+                                              // the user first signed up. You'll want to send it
+                                              // as seconds since the epoch.
   });
 })
