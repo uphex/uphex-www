@@ -17,6 +17,7 @@
         = link_to 'Privacy Policy', '/privacy.html', class: 'footer__anchor'
 
 :javascript
+  // Google Analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -24,3 +25,18 @@
 
   ga('create', 'UA-37548222-4', 'uphex.com');
   ga('send', 'pageview');
+
+  // Customer.io
+  var _cio = _cio || [];
+  (function() {
+    var a,b,c;a=function(f){return function(){_cio.push([f].
+    concat(Array.prototype.slice.call(arguments,0)))}};b=["load","identify",
+    "sidentify","track","page"];for(c=0;c<b.length;c++){_cio[b[c]]=a(b[c])};
+    var t = document.createElement('script'),
+        s = document.getElementsByTagName('script')[0];
+    t.async = true;
+    t.id    = 'cio-tracker';
+    t.setAttribute('data-site-id', '6c5df6b1cce5480bc709');
+    t.src = 'https://assets.customer.io/assets/track.js';
+    s.parentNode.insertBefore(t, s);
+  })();
