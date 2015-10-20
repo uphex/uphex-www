@@ -1,6 +1,7 @@
 var prelaunchBtns = document.getElementsByClassName('js-prelaunch-modal');
-var modal = document.getElementById('modal');
 var overlay = document.getElementById('overlay');
+var modal = document.getElementById('modal');
+var content = document.getElementById('modal-content');
 var body = document.getElementsByTagName('body')[0];
 
 for (var i = 0; i < prelaunchBtns.length; i++) {
@@ -19,7 +20,7 @@ overlay.addEventListener('click', function(e) {
 function toggleModal() {
   body.classList.toggle('frozen');
   modal.classList.toggle('hidden');
-  modal.classList.toggle('opaque');
+  modal.classList.toggle('fade-in');
 }
 
 document.signup.addEventListener('submit', function(e) {

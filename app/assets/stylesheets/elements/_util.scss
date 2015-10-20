@@ -11,12 +11,18 @@
   pointer-events: none !important;
 }
 
-.opaque {
+.frozen {
+  overflow: hidden !important;
+}
+
+.fade-in {
+  @include transition(all $t-fast ease-in);
   opacity: 1 !important;
 }
 
-.frozen {
-  overflow: hidden !important;
+.fade-out {
+  @include transition(all $t-fast ease-out);
+  opacity: 0 !important;
 }
 
 .fill--blue {

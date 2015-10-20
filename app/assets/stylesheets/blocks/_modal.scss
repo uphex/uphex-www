@@ -35,6 +35,27 @@
     h2 {
       margin-bottom: $padding;
     }
+
+    &--blue {
+      border-color: $blue;
+    }
+
+    &--green {
+      border-color: $green;
+    }
+
+    &--red {
+      border-color: $red;
+    }
+
+    &--blue {
+      border-color: $blue;
+    }
+
+    &--yellow {
+      border-color: $yellow;
+    }
+
   }
 
   &__close {
