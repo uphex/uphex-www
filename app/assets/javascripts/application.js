@@ -3,6 +3,7 @@ var overlay = document.getElementById('overlay');
 var modal = document.getElementById('modal');
 var signupContent = document.getElementById('signup-content');
 var signedupContent = document.getElementById('signedup-content');
+var signupEmail = document.getElementById('signup-email')
 var body = document.getElementsByTagName('body')[0];
 
 for (var i = 0; i < prelaunchBtns.length; i++) {
@@ -28,5 +29,14 @@ document.signup.addEventListener('submit', function(e) {
   e.preventDefault();
   signupContent.classList.toggle('hidden');
   signedupContent.classList.toggle('hidden');
-  //customer io stuff goes here
+
+  // Info to send to Customer.io
+  // _cio.identify({
+  //   // Required attributes
+  //   id: 'prod_287',                 // Unique id for the currently signed in user in your application.
+  //   email: signupEmail.value,       // Email of the currently signed in user.
+  //   created_at: new Date() / 1000,  // Timestamp in your system that represents when
+  //                                   // the user first signed up. You'll want to send it
+  //                                   // as seconds since the epoch.
+  // });
 })
