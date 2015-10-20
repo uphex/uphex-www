@@ -11,7 +11,7 @@ for (var i = 0; i < prelaunchBtns.length; i++) {
 }
 
 overlay.addEventListener('click', function(e) {
-  if (e.target.id == 'overlay') {
+  if (overlay.id == e.target.id) {
     toggleModal();
   }
 }, false)
