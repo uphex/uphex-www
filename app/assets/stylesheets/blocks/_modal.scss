@@ -25,12 +25,16 @@
 
   &__content {
     margin: $padding;
-    padding: $padding * 2;
+    padding: $padding 0;
     position: relative;
     border-radius: $radius * 2;
     border: 2px solid $black;
     background: $white;
     z-index: $z-modal;
+
+    h2 {
+      margin-bottom: $padding;
+    }
   }
 
   &__close {
@@ -71,7 +75,12 @@
 
   @include media($breakpoint-medium) {
     &__content {
+      padding: ($padding * 2) $padding;
       @include span-columns(8);
+
+      h2 {
+        margin-bottom: inherit;
+      }
     }
   }
 
