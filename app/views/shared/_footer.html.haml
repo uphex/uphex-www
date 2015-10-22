@@ -36,7 +36,7 @@
         s = document.getElementsByTagName('script')[0];
     t.async = true;
     t.id    = 'cio-tracker';
-    t.setAttribute('data-site-id', '6c5df6b1cce5480bc709');
+    t.setAttribute('data-site-id', '#{ENV['CUSTOMER_API_KEY']}');
     t.src = 'https://assets.customer.io/assets/track.js';
     s.parentNode.insertBefore(t, s);
   })();
