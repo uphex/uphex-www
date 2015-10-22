@@ -3,7 +3,6 @@ var overlay = document.getElementById('overlay');
 var modal = document.getElementById('modal');
 var signupContent = document.getElementById('signup-content');
 var signedupContent = document.getElementById('signedup-content');
-var signupEmail = document.getElementById('signup-email')
 var body = document.getElementsByTagName('body')[0];
 
 for (var i = 0; i < prelaunchBtns.length; i++) {
@@ -30,23 +29,52 @@ function isEmail(string) {
   return matcher.test(string);
 }
 
-document.signup.addEventListener('submit', function(e) {
+function coIdentify(email) {
+  _cio.identify({
+    // Required attributes
+    id: email,                                // Unique id for the currently signed in user in your application.
+    email: email,                             // Email of the currently signed in user.
+    created_at: parseInt(new Date() / 1000),  // Timestamp in your system that represents when
+                                              // the user first signed up. You'll want to send it
+                                              // as seconds since the epoch.
+  });
+}
+
+document.pricingSignup.addEventListener('submit', function(e) {
   e.preventDefault();
-  if (isEmail(signupEmail.value)) {
+  var email = document.getElementById('pricing-signup-email').value;
+
+  if (!signedupContent.classList.contains('hidden')) {
+    toggleModal();
+  }
+
+  else if (isEmail(email)) {
     signupContent.classList.toggle('hidden');
     signedupContent.classList.toggle('hidden');
-
-    // Info to send to Customer.io
-    _cio.identify({
-      // Required attributes
-      id: signupEmail.value,                    // Unique id for the currently signed in user in your application.
-      email: signupEmail.value,                 // Email of the currently signed in user.
-      created_at: parseInt(new Date() / 1000),  // Timestamp in your system that represents when
-                                                // the user first signed up. You'll want to send it
-                                                // as seconds since the epoch.
-    });
+    coIdentify(email);
   }
+
   else {
-    document.getElementById('bad-email-message').classList.toggle('hidden');
+    document.getElementById('pricing-signup-message').classList.toggle('hidden');
+  }
+})
+
+document.sampleSignup.addEventListener('submit', function(e) {
+  e.preventDefault();
+  var email = document.getElementById('sample-signup-email').value;
+
+  if (!signedupContent.classList.contains('hidden')) {
+    toggleModal();
+  }
+
+  else if (isEmail(email)) {
+    signupContent.classList.toggle('hidden');
+    signedupContent.classList.toggle('hidden');
+    toggleModal();
+    coIdentify(email);
+  }
+
+  else {
+    document.getElementById('sample-signup-message').classList.toggle('hidden');
   }
 })

@@ -8,11 +8,11 @@
         %strong
           Bonus: Get 25% off for life by signing up now!
 
-      %form{name: 'signup'}
-        #bad-email-message.message.message--red.hidden Oops! Please enter a valid email address.
+      %form{name: 'pricingSignup'}
+        #pricing-signup-message.message.message--red.hidden Oops! Please enter a valid email address.
         .input-group
           .input-group__input
-            %input#signup-email.input.input--green#signup-email{:placeholder => 'Email'}
+            %input#pricing-signup-email.input.input--green{:placeholder => 'Email'}
           .input-group__button
             %button.button.button--green Reserve Spot
     #signedup-content.container.hidden
