@@ -45,3 +45,26 @@ $blue        : #2781ef;
 $green       : #24cc6b;
 $red         : #d73333;
 $yellow      : #f5e139;
+
+/**
+ * Z-Indicies
+
+ * Using these variables should ALWAYS be used when declaring a z-index value
+ */
+
+$z-hidden  : -1;
+$z-base    : 1;
+$z-raise   : 2;
+$z-toolbar : 3;
+$z-tooltip : 4;
+$z-overlay : 5;
+$z-modal   : 6;
+
+/**
+ * Transitions
+
+ * So our animations play at a consistent rate
+ */
+
+ $t-fast : 0.15s;
+ $t-slow : 0.30s;

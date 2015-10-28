@@ -11,6 +11,20 @@
   background: $dark-white;
   text-align: center;
 
+  &__content {
+    @include media($breakpoint-small) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+  }
+
+  .input-group {
+    @include media($breakpoint-medium) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+  }
+
   @include media($breakpoint-medium) {
     padding: $padding * 5 0;
 

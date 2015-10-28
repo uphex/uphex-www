@@ -9,16 +9,6 @@
 .input-group {
   @include omega;
 
-  @include media($breakpoint-small) {
-    @include span-columns(8);
-    @include shift(2);
-  }
-
-  @include media($breakpoint-medium) {
-    @include span-columns(6);
-    @include shift(3);
-  }
-
   &__input {
     @include span-columns(6);
     @include omega;

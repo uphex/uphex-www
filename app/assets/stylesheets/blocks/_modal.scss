@@ -1,0 +1,113 @@
+/**
+ * MODAL
+
+ * A block for a modal window that appears above the rest of the app
+
+ * Note: The body element will have a modifier applied to it when a
+ * modal is activated through JavaScript to assist this block.
+ */
+
+.modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: $z-overlay;
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+  @include transition(opacity $t-fast ease-in);
+
+  &__content {
+    margin: $padding;
+    padding: $padding 0;
+    position: relative;
+    border-radius: $radius * 2;
+    border: 2px solid $black;
+    background: $white;
+    z-index: $z-modal;
+
+    h2 {
+      margin-bottom: $padding;
+    }
+
+    &--blue {
+      border-color: $blue;
+    }
+
+    &--green {
+      border-color: $green;
+    }
+
+    &--red {
+      border-color: $red;
+    }
+
+    &--blue {
+      border-color: $blue;
+    }
+
+    &--yellow {
+      border-color: $yellow;
+    }
+
+  }
+
+  &__close {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    display: block;
+    padding: 0;
+    width: $padding * 2;
+    height: $padding * 2;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    line-height: $padding * 2;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba($black, 0.8);
+    z-index: $z-overlay;
+  }
+
+  .input-group {
+    @include media($breakpoint-small) {
+      @include span-columns(12);
+      @include shift(0);
+    }
+
+    @include media($breakpoint-extralarge) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+  }
+
+  @include media($breakpoint-medium) {
+    &__content {
+      padding: ($padding * 2) $padding;
+      @include span-columns(8);
+
+      h2 {
+        margin-bottom: inherit;
+      }
+    }
+  }
+
+  @include media($breakpoint-large) {
+    &__content {
+      @include span-columns(6);
+    }
+  }
+}

@@ -4,6 +4,31 @@
  * Classes for quickly adding useful properties to an element
  */
 
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  // display: none not set, so animations can still work
+  visibility: hidden !important;
+  z-index: $z-hidden !important;
+  pointer-events: none !important;
+}
+
+.frozen {
+  overflow: hidden !important;
+}
+
+.fade-in {
+  @include transition(all $t-fast ease-in);
+  opacity: 1 !important;
+}
+
+.fade-out {
+  @include transition(all $t-fast ease-out);
+  opacity: 0 !important;
+}
+
 .fill--blue {
   fill: $blue;
 }
@@ -11,9 +36,16 @@
 .fill--green {
   fill: $green;
 }
+
 .fill--red {
   fill: $red;
 }
+
 .fill--yellow {
   fill: $yellow;
+}
+
+.nospace {
+  padding: 0;
+  margin: 0;
 }

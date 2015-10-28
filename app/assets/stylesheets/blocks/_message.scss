@@ -1,0 +1,28 @@
+/**
+ * MESSAGE
+
+ * A block for displaying a message from the system, such as error and
+ * success messages
+ */
+
+.message {
+  margin: 0 0 $padding * 2;
+  font-size: 14px;
+  font-weight: 700;
+
+  &--blue {
+    color: $blue;
+  }
+
+  &--green {
+    color: $green;
+  }
+
+  &--red {
+    color: $red;
+  }
+
+  &--yellow {
+    color: $yellow;
+  }
+}

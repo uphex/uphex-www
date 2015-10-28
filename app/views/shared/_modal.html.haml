@@ -1,0 +1,21 @@
+#modal.modal.invisible
+  .modal__content.ask
+    %a.js-prelaunch-modal.button.button--small.modal__close{href: '#'} ×
+    #signup-content.container
+      %h2 Coming Soon
+      %p We’re putting the final touches on our reporting service. Sign up below to reserve your spot on our waitlist.
+      %p
+        %strong
+          Bonus: Get 25% off for life by signing up now!
+
+      %form{name: 'pricingSignup'}
+        #pricing-signup-message.message.message--red.hidden Oops! Please enter a valid email address.
+        .input-group
+          .input-group__input
+            %input#pricing-signup-email.input.input--green{:placeholder => 'Email'}
+          .input-group__button
+            %button.button.button--green Reserve Spot
+    #signedup-content.container.hidden
+      %h3 Woohoo! Thanks for signing up.
+      %p.nospace Keep an eye on your inbox. Your coupon code is on its way.
+  #overlay.modal__overlay
