@@ -6,13 +6,12 @@
 
 
 .input {
-  padding: 0 $padding;
+  padding: $padding;
   background: $white;
   border: 2px solid $light-black;
   border-radius: $radius;
   outline: 0;
   color: $black;
-  line-height: 50px;
   @include appearance(none);
 
   &--black {
