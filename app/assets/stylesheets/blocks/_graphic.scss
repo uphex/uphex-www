@@ -11,7 +11,7 @@
     background-position: 0 65px;
   }
   to {
-    background-position: 0 -557.5px;
+    background-position: 0 calc(100% - 335px);
   }
 }
 
@@ -60,7 +60,7 @@
     background: url("/assets/report-for-hero.png") repeat-y;
     background-position: 0 65px;
     background-size: 100%;
-    @include animation(scroll 15s linear infinite);
+    @include animation(scroll 18s linear infinite);
   }
 
   @include media($breakpoint-medium) {
