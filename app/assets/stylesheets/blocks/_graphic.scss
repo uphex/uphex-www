@@ -60,7 +60,7 @@
     background: url("/assets/report-for-hero.png") repeat-y;
     background-position: 0 65px;
     background-size: 100%;
-    @include animation(scroll 18s linear infinite);
+    @include animation(scroll 4s linear infinite);
   }
 
   @include media($breakpoint-medium) {
