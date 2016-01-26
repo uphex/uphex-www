@@ -1,0 +1,55 @@
+/**
+ * PLOT
+
+ * Displays a plot graph, with values on the top, nodes in the bottom and two
+ * more labels acting as a legend in the bottom
+ */
+
+
+.plot {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+
+  &__graph {
+    display: table-row;
+  }
+
+  &__values {
+    display: table-row;
+  }
+
+  &__value {
+    display: table-cell;
+    font-size: $fs-small;
+  }
+
+  &__label {
+    display: inline-block;
+    padding: 0 3px;
+    background: $white;
+  }
+
+  &__begin {
+    display: table-cell;
+    background: url('/assets/metric-first.png') no-repeat center;
+    background-size: 128px 32px;
+    font-size: $fs-extrasmall;
+    font-weight: bold;
+  }
+
+  &__end {
+    display: table-cell;
+    background: url('/assets/metric-last.png') no-repeat center;
+    background-size: 128px 32px;
+    font-size: $fs-extrasmall;
+    font-weight: bold;
+  }
+
+  &__connect {
+    display: table-cell;
+    background: url('/assets/metric-connect.png') no-repeat center;
+    background-size: 128px 32px;
+  }
+}

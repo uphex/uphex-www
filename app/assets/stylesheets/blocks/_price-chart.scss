@@ -14,12 +14,22 @@
 
     strong {
       font-weight: 400;
-      font-size: 20px;
+      font-size: $fs-large;
     }
 
     span {
       font-weight: 400;
-      font-size: 12px;
+      font-size: $fs-extrasmall;
+    }
+
+    @media #{$breakpoint-medium} {
+      strong {
+        font-size: 28px;
+      }
+
+      span {
+        font-size: $fs-small;
+      }
     }
   }
 
@@ -27,35 +37,22 @@
     list-style: none;
     padding: 0;
     margin: 0;
+
+    @media #{$breakpoint-small} {
+      margin: 0 0 $padding * 2;
+    }
+
+    @media #{$breakpoint-medium} {
+      margin: 0 0 $padding;
+    }
   }
 
   &__feature {
     margin: 0 0 $padding;
   }
 
-  @include media($breakpoint-small) {
+  @media #{$breakpoint-small} {
     margin: 0;
     text-align: left;
-
-    &__features {
-      margin: 0 0 $padding * 2;
-    }
-  }
-
-  @include media($breakpoint-medium) {
-    &__heading {
-
-      strong {
-        font-size: 28px;
-      }
-
-      span {
-        font-size: 14px;
-      }
-    }
-
-    &__features {
-      margin: 0 0 $padding;
-    }
   }
 }

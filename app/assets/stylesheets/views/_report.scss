@@ -1,0 +1,238 @@
+/**
+ * REPORT
+
+ * Various styles specific to the Report page and its blocks: highlights, kpis
+ * and metrics
+ */
+
+.report {
+  padding: $padding 0;
+  background: $dark-white;
+
+  @media #{$breakpoint-medium} {
+    padding: $padding * 2 0;
+  }
+
+  &__title {
+    padding: $padding * 2;
+    background: $blue;
+    color: $white;
+    text-align: center;
+    font-size: $fs-medium;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-large;
+    }
+  }
+
+  &__content {
+    background: $white;
+
+    @media #{$breakpoint-medium} {
+      overflow: hidden;
+      border-radius: $radius;
+      @include span-columns(10);
+      @include shift(1);
+    }
+
+    @media #{$breakpoint-large} {
+      @include span-columns(8);
+      @include shift(2);
+    }
+  }
+
+  &__section {
+    overflow: hidden;
+    padding: $padding;
+
+    @media #{$breakpoint-medium} {
+      padding: $padding ($padding * 2);
+    }
+  }
+
+  &__section-title {
+    position: relative;
+    clear: both;
+    text-align: center;
+    font-weight: 400;
+    z-index: $z-base;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 100%;
+      height: 1px;
+      background: $dark-white;
+      z-index: $z-hidden;
+    }
+
+    @media #{$breakpoint-medium} {
+      margin: 0 0 ($padding * 2);
+      &:after {
+        top: $padding;
+      }
+    }
+  }
+
+  &__section-innerTitle {
+    padding: 0 $padding;
+    background: $white;
+    z-index: $z-raise;
+  }
+
+  &__metric-channel {
+    clear: both;
+    margin: 0 0 10px;
+    font-weight: 400;
+    @include display(flex);
+    @include align-items(stretch);
+  }
+
+  &__metric-icon {
+    position: relative;
+    display: inline-block;
+    margin-right: 4px;
+    width: 22px;
+    top: 2px;
+    font-size: 22px;
+    @include flex-shrink(0);
+    @include display(flex);
+    @include justify-content(top);
+
+    @media #{$breakpoint-medium} {
+      top: 0;
+      width: 28px;
+      font-size: 28px;
+    }
+  }
+
+  &__plot {
+    &-group {
+      margin: 0 0 $padding;
+
+      &:last-of-type {
+        margin: 0 0 ($padding * 2);
+      }
+
+      @media #{$breakpoint-medium} {
+        margin: 0 0 ($padding * 2);
+
+        &:last-of-type {
+          margin: 0 0 ($padding * 3);
+        }
+      }
+    }
+
+    &-title {
+      margin: 0;
+      padding: 0 0 10px;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}
+
+.highlight {
+  @media #{$breakpoint-small} {
+    @include display(flex);
+    @include align-items(stretch);
+  }
+
+  &__primary-data,
+  &__secondary-data {
+    text-align: center;
+    @include span-columns(6);
+  }
+
+  &__left {
+    @media #{$breakpoint-small} {
+      @include span-columns(3);
+    }
+
+    @media #{$breakpoint-medium} {
+      @include span-columns(4);
+      @include display(flex); // must come after span-columns since it sets a display: block
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+    }
+  }
+
+  &__right {
+    overflow: hidden;
+    margin: 0 0 $padding;
+
+    @media #{$breakpoint-small} {
+      @include span-columns(9);
+    }
+
+    @media #{$breakpoint-medium} {
+      @include span-columns(8);
+      margin: 0 0 ($padding * 2);
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+  }
+
+  &__date {
+    font-size: $fs-small;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-medium;
+    }
+  }
+
+  &__channel {
+    margin: 0 0 ($padding / 2);
+  }
+
+  &__channelname {
+    display: inline-block;
+    font-size: $fs-small;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-medium;
+    }
+  }
+
+  &__datanum {
+    font-size: $fs-small;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-medium;
+    }
+  }
+
+  &__datalabel {
+    padding: 0;
+    color: $light-black;
+    font-size: $fs-extrasmall;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-small;
+    }
+  }
+
+  &__timeline {
+    display: none;
+    position: relative;
+    top: 7px;
+    width: 9px;
+    background-image: url('/assets/timeline-connect.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    @include align-self(stretch);
+
+    &--last {
+      background-image: url('/assets/timeline-last.png');
+    }
+
+    @media #{$breakpoint-medium} {
+      display: block;
+    }
+  }
+}

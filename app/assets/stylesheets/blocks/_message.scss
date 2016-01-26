@@ -5,24 +5,28 @@
  * success messages
  */
 
+
 .message {
   margin: 0 0 $padding * 2;
-  font-size: 14px;
+  padding: $padding;
+  background-color: lighten($black, 50%);
+  color: $black;
+  font-size: $fs-small;
   font-weight: 700;
 
   &--blue {
-    color: $blue;
+    background: lighten($blue, 20%);
   }
 
   &--green {
-    color: $green;
+    background: lighten($green, 20%);
   }
 
   &--red {
-    color: $red;
+    background: lighten($red, 20%);
   }
 
   &--yellow {
-    color: $yellow;
+    background-color: lighten($yellow, 30%);
   }
 }

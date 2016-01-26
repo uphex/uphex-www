@@ -1,0 +1,108 @@
+/**
+ * STRIP
+
+ * A block to mimic a table row but this is much more flexible.
+ */
+
+
+.strips {
+  @media #{$breakpoint-small} {
+    display: table;
+    width: 100%;
+  }
+}
+
+.strip {
+  margin-bottom: $padding;
+  overflow: hidden;
+
+  &:last-of-type {
+    @media #{$breakpoint-small} {
+      .strip__left-content,
+      .strip__middle-content,
+      .strip__right-content {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__left-content {
+    clear: both;
+    vertical-align: middle;
+
+    @media #{$breakpoint-small} {
+      width: 40%;
+      display: table-cell;
+      padding: $padding ($padding * 2) $padding 0;
+      border-bottom: 1px solid $dark-white;
+
+    }
+  }
+
+  &__middle-content {
+    margin-left: 26px;
+    clear: both;
+    vertical-align: middle;
+
+    @media #{$breakpoint-small} {
+      width: 40%;
+      display: table-cell;
+      margin-left: 0;
+      padding: $padding ($padding * 2) $padding 0;
+      border-bottom: 1px solid $dark-white;
+
+    }
+  }
+
+  &__right-content {
+    margin-left: 26px;
+    clear: both;
+    vertical-align: middle;
+
+    @media #{$breakpoint-small} {
+      width: 20%;
+      display: table-cell;
+      margin-left: 0;
+      padding: $padding 0;
+      border-bottom: 1px solid $dark-white;
+    }
+  }
+
+  &__wrap {
+    @include display(flex);
+  }
+
+  &__icon {
+    position: relative;
+    top: 2px;
+    width: 22px;
+    margin-right: 4px;
+    font-size: 22px;
+    line-height: 0;
+    @include flex-shrink(0);
+
+    @media #{$breakpoint-small} {
+      width: auto;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    width: 100%;
+  }
+
+  &__status {
+    float: left;
+    font-size: $fs-small;
+    @include calc(width, "100% - 40px"); // 100% - button--remove + padding size
+  }
+
+  &__action {
+    float: right;
+  }
+
+  @media #{$breakpoint-small} {
+    display: table-row;
+    margin: 0;
+  }
+}

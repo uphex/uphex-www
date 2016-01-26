@@ -1,0 +1,41 @@
+/**
+ * TABLE
+
+ * Used with a table element to apply proper styling.
+ */
+
+
+.table {
+  width: 100%;
+  margin: 0 0 $padding * 2;
+  border: 1px solid $dark-white;
+
+  thead {
+    background: $dark-white;
+
+    th {
+      text-align: left;
+      padding: ($padding / 2);
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background: lighten($dark-white, 3%);
+      }
+    }
+
+    td {
+      padding: ($padding / 2);
+    }
+
+    a {
+      color: $blue;
+    }
+  }
+
+  @media #{$breakpoint-medium} {
+    padding: 0 0 ($padding * 2);
+  }
+}

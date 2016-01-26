@@ -4,15 +4,21 @@
  * Styles for root elements that wrap and effect all other elements
  */
 
+
 html {
   height: 100%;
 }
 
 body {
   position: relative;
-  height: 100%;
+  min-height: 100%;
   color: $black;
-  font: 16px/1.5 'open sans', 'helvetica neue', arial, sans-serif;
+  font: $fs-medium 'open sans', 'helvetica neue', arial, sans-serif;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media #{$breakpoint-medium} and #{$breakpoint-vertical-small} {
+    padding-bottom: 102px;
+  }
 }

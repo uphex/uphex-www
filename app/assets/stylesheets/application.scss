@@ -12,7 +12,7 @@
  * We include these first as some variables in Gems are modified
  */
 
-@import "variables";
+@import "_variables.scss";
 
 /**
  * Gems
@@ -22,10 +22,14 @@
 
  * Neat is an extension of Bourbon that helps with creating grid layouts
  * http://neat.bourbon.io/
+
+ * Font Awesome gem is user for icons
+ * https://github.com/FortAwesome/font-awesome-sass
  */
 
 @import "bourbon";
 @import "neat";
+@import "font-awesome";
 
 /**
  * Libraries
@@ -34,7 +38,7 @@
  * https://necolas.github.io/normalize.css/
  */
 
-@import "lib/normalize";
+@import "lib/_normalize.scss";
 
 /**
  * uphex-www
@@ -57,12 +61,14 @@
  * .button
 */
 
-@import "elements/base";
-@import "elements/button";
-@import "elements/form";
-@import "elements/logo";
-@import "elements/type";
-@import "elements/util";
+@import "elements/_base.scss";
+@import "elements/_button.scss";
+@import "elements/_dot.scss";
+@import "elements/_form.scss";
+@import "elements/_icon.scss";
+@import "elements/_logo.scss";
+@import "elements/_type.scss";
+@import "elements/_util.scss";
 
 /**
  * Blocks
@@ -71,18 +77,45 @@
  * elements and modifiers beneath them, though can also contain other blocks.
  */
 
-@import "blocks/ask";
-@import "blocks/button-group";
-@import "blocks/container";
-@import "blocks/footer";
-@import "blocks/generic";
-@import "blocks/graphic";
-@import "blocks/header";
-@import "blocks/hero";
-@import "blocks/input-stack";
-@import "blocks/message";
-@import "blocks/modal";
-@import "blocks/price-chart";
-@import "blocks/input-group";
-@import "blocks/splash";
-@import "blocks/tout";
+@import "blocks/_ask.scss";
+@import "blocks/_bignum.scss";
+@import "blocks/_blank-state.scss";
+@import "blocks/_button-group.scss";
+@import "blocks/_card.scss";
+@import "blocks/_container.scss";
+@import "blocks/_footer.scss";
+@import "blocks/_generic.scss";
+@import "blocks/_graphic.scss";
+@import "blocks/_header.scss";
+@import "blocks/_headingbar.scss";
+@import "blocks/_hero.scss";
+@import "blocks/_input-stack.scss";
+@import "blocks/_message.scss";
+@import "blocks/_modal.scss";
+@import "blocks/_plot.scss";
+@import "blocks/_payment-form.scss";
+@import "blocks/_price-chart.scss";
+@import "blocks/_input-group.scss";
+@import "blocks/_splash.scss";
+@import "blocks/_strip.scss";
+@import "blocks/_table.scss";
+@import "blocks/_tile.scss";
+@import "blocks/_tile-group.scss";
+@import "blocks/_tout.scss";
+
+/**
+ * Views
+
+ * Views containing styles specific to a controller/action/view. These will
+ * have styles making sweeping changes to look and feel of such parts of the app.
+ */
+
+ @import "views/_report.scss";
+
+/**
+ * Shame
+
+ * Styles that were written long ago or hacks that need to be refactored.
+ */
+
+@import "_shame.scss"

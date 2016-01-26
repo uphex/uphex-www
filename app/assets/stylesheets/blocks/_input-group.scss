@@ -2,7 +2,7 @@
  * INPUT GROUP
 
  * Aligns and modifies the appearance of a single input and a single
- * button together
+ * button or label together
  */
 
 
@@ -20,15 +20,37 @@
 
     .input {
       width: 100%;
+      margin-bottom: $padding;
     }
 
-    @include media($breakpoint-small) {
+    @media #{$breakpoint-small} {
       @include span-columns(7);
       @include omega;
     }
 
-    @include media($breakpoint-large) {
+    @media #{$breakpoint-large} {
       @include span-columns(8);
+      @include omega;
+    }
+  }
+
+  &__label {
+
+    @include span-columns(6);
+    @include omega;
+
+    &:last-child label {
+      display: block;
+      border-radius: 0 $radius $radius 0;
+    }
+
+    @media #{$breakpoint-small} {
+      @include span-columns(5);
+      @include omega;
+    }
+
+    @media #{$breakpoint-large} {
+      @include span-columns(4);
       @include omega;
     }
   }
@@ -48,12 +70,12 @@
       line-height: 26px;
     }
 
-    @include media($breakpoint-small) {
+    @media #{$breakpoint-small} {
       @include span-columns(5);
       @include omega;
     }
 
-    @include media($breakpoint-large) {
+    @media #{$breakpoint-large} {
       @include span-columns(4);
       @include omega;
     }

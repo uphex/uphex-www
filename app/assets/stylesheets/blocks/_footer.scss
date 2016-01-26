@@ -11,43 +11,27 @@
   text-align: center;
   background: $black;
 
+  &__title {
+    display: block;
+    margin: $padding auto $padding * 2;
+    width: 37px;
+    height: 42px;
+    text-indent: -9999px;
+    background: url('/assets/logo-markonly-white@2x.png') no-repeat;
+    background-size: 100%;
+
+    @media #{$breakpoint-medium} {
+      float: left;
+      margin: 0;
+    }
+  }
+
   &__links {
     margin: 0 -5px;
     padding: 0;
     list-style: none;
-  }
 
-  &__link {
-    font-size: 14px;
-    line-height: 42px;
-
-    a {
-      color: $white;
-    }
-  }
-
-  .logo {
-    margin: $padding auto $padding * 2;
-  }
-
-  .button {
-    margin: 0 0 $padding;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 14px;
-  }
-
-  &--center {
-    .container {
-      text-align: center;
-    }
-  }
-
-  @include media($breakpoint-medium) {
-    padding: $padding * 2 0;
-    text-align: inherit;
-
-    &__links {
+    @media #{$breakpoint-medium} {
       position: absolute;
 
       &--primary {
@@ -58,31 +42,70 @@
         right: $padding * 2;
       }
     }
+  }
 
-    &__link {
+  &__link {
+    font-size: $fs-small;
+    line-height: 42px;
+
+    a {
+      color: $white;
+    }
+
+    @media #{$breakpoint-medium} {
       display: inline-block;
       margin: 0 5px;
     }
+  }
 
-    &__buttonwrap {
+  .container {
+    overflow: hidden;
+  }
+
+  .button-wrap {
+    @media #{$breakpoint-medium} {
       float: right;
     }
+  }
 
-    .logo {
+  .logo {
+    margin: $padding auto $padding * 2;
+
+    @media #{$breakpoint-medium} {
       float: left;
       margin: 0;
     }
+  }
 
-    .button {
+  .button {
+    margin: 0 0 $padding;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: $fs-small;
+
+    @media #{$breakpoint-medium} {
       margin: 0 0 0 5px;
     }
+  }
 
-    &--center {
-      .footer__links {
-        margin: 0 auto;
-        position: relative;
-        left: inherit;
-      }
+  &--splash {
+    padding: $padding * 2;
+
+    .footer__links {
+      position: relative;
+      text-align: center;
     }
+  }
+
+  @media #{$breakpoint-medium} and #{$breakpoint-vertical-small}{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media #{$breakpoint-medium} {
+    padding: $padding * 2 0;
+    text-align: inherit;
   }
 }

@@ -10,14 +10,6 @@
   padding: $padding 0 0;
   text-align: center;
 
-  h3 {
-    margin-bottom: $padding;
-  }
-
-  a {
-    color: $green;
-  }
-
   &__icon {
     display: block;
     width: 100%;
@@ -29,23 +21,13 @@
     }
   }
 
-  @include media($breakpoint-small) {
-    text-align: left;
+  &__item {
+    margin-top: $padding * 3;
+    margin-bottom: $padding * 3;
+    @include display(flex);
+    @include align-items(center);
 
-    h1 {
-      text-align: center;
-    }
-  }
-
-  @include media($breakpoint-medium) {
-    padding: $padding * 5 0 0;
-
-    &__item {
-      margin-top: $padding * 3;
-      margin-bottom: $padding * 3;
-      @include display(flex);
-      @include align-items(center);
-
+    @media #{$breakpoint-medium} {
       &-row {
         overflow: hidden;
 
@@ -98,22 +80,7 @@
       }
     }
 
-    &__icon-wrap {
-      @include flex-shrink(0);
-    }
-
-    &__icon {
-      margin: 0 auto $padding * 2;
-      max-width: 180px;
-    }
-
-    p {
-      font-size: 20px;
-    }
-  }
-
-  @include media($breakpoint-large) {
-    &__item {
+    @media #{$breakpoint-large} {
       margin-top: $padding * 4;
       margin-bottom: $padding * 4;
 
@@ -121,5 +88,46 @@
         margin-bottom: $padding * 3;
       }
     }
+  }
+
+  &__icon-wrap {
+    @media #{$breakpoint-medium} {
+      @include flex-shrink(0);
+    }
+  }
+
+  &__icon {
+    @media #{$breakpoint-medium} {
+      margin: 0 auto $padding * 2;
+      max-width: 180px;
+    }
+  }
+
+  h1 {
+    @media #{$breakpoint-small} {
+      text-align: center;
+    }
+  }
+
+  h3 {
+    margin-bottom: $padding;
+  }
+
+  a {
+    color: $green;
+  }
+
+  p {
+    @media #{$breakpoint-medium} {
+      font-size: $fs-large;
+    }
+  }
+
+  @media #{$breakpoint-small} {
+    text-align: left;
+  }
+
+  @media #{$breakpoint-medium} {
+    padding: $padding * 5 0 0;
   }
 }

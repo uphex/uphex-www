@@ -1,0 +1,55 @@
+/**
+ * TILE GROUP
+
+ * Aligns and modifies the appearance of a row of tiless
+ */
+
+
+.tile-group {
+  margin: $padding * 2 0;
+  @include display(flex);
+  @include align-items(stretch);
+  @include justify-content(center);
+  @include flex-direction(column);
+
+  .tile {
+    border-radius: 0;
+    @include flex(1);
+
+    @media #{$breakpoint-to-medium} {
+      &:not(:last-of-type) {
+        border-bottom: 0;
+      }
+
+      &:first-of-type {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+      }
+
+      &:last-of-type {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+      }
+    }
+
+    @media #{$breakpoint-medium} {
+      &:not(:last-of-type) {
+        border-right: 0;
+      }
+
+      &:first-of-type {
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+      }
+
+      &:last-of-type {
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
+      }
+    }
+  }
+
+  @media #{$breakpoint-medium} {
+    @include flex-direction(row);
+  }
+}

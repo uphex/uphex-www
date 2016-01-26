@@ -1,0 +1,56 @@
+/**
+ * PAYMENT FORM
+
+ * A block form displaying a form to collect payment information
+ */
+
+
+.payment-form {
+  max-width: 400px;
+
+  &__row {
+    display: block;
+    clear: both;
+
+    &--coupon {
+      margin: 0 0 ($padding * 2);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: $green;
+    border-bottom: 1px solid $green;
+    font-weight: 700;
+  }
+
+  &__field {
+    margin: 0 0 $padding;
+    overflow: hidden;
+
+
+    &--expiration {
+      .input {
+        @include span-columns(6);
+      }
+    }
+
+    @media #{$breakpoint-small} {
+      &--expiration {
+        @include span-columns(8);
+      }
+
+      &--security {
+        @include span-columns(4);
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+  }
+
+  .input {
+    width: 100%;
+  }
+}

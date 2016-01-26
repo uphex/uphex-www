@@ -1,0 +1,17 @@
+/**
+ * BLANK STATE
+
+ * A blank state for areas without content, to prompt the user to fill them.
+ */
+
+
+.blank-state {
+  padding: $padding;
+  border-radius: $radius;
+  background: $dark-white;
+  text-align: center;
+
+  @media #{$breakpoint-medium} {
+    padding: ($padding * 2);
+  }
+}

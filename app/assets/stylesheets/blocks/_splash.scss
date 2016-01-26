@@ -4,38 +4,38 @@
  * A block that will usually be the only parent element on a page.
  */
 
+
 .splash {
   position: relative;
   overflow: hidden;
-  height: 100%;
+  height: 100vh;
+  margin-bottom: -102px;
   background: $black;
   text-align: center;
   color: $white;
+
+  &__form {
+    @media #{$breakpoint-medium} {
+      @include span-columns(4);
+    }
+  }
 
   .logo {
     margin: ($padding * 2) 0;
   }
 
-  @include media($breakpoint-medium) {
-    &__form {
-      @include span-columns(4);
-    }
+  .container {
+    @include display(flex);
+    @include align-items(center);
+    @include flex-direction(column);
 
-    .container {
+    @media #{$breakpoint-medium} and #{$breakpoint-vertical-small} {
       height: 100%;
-      @include display(flex);
       @include justify-content(center);
-      @include align-items(center);
-      @include flex-direction(column);
     }
+  }
 
-    .footer__links {
-      display: inline-block;
-      margin: $padding 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-    }
+  @media #{$breakpoint-medium} {
+    height: 100vh;
   }
 }

@@ -1,0 +1,21 @@
+/**
+ * HEADINGBAR
+
+ * A block used to wrap around the highest heading and some additional
+ * elements so they appear nicely at the top of a page
+ */
+
+
+.headingbar {
+  position: relative;
+
+  > .button {
+    margin: 0 0 $padding;
+
+    @media #{$breakpoint-small} {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

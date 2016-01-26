@@ -1,0 +1,19 @@
+/**
+ * BIGNUM
+
+ * A block for displaying big numbers on a page, usually for dashboards
+ */
+
+
+.bignum {
+  margin: 0 0 $padding;
+  @include outer-container();
+
+  &:last-of-type {
+    margin: 0 0 ($padding * 2);
+  }
+
+  &__item {
+    @include span-columns(4);
+  }
+}

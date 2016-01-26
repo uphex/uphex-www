@@ -6,12 +6,13 @@
  * that block.
  */
 
+
 @include keyframes(scroll) {
   from {
     background-position: 0 65px;
   }
   to {
-    background-position: 0 calc(100% - 335px);
+    background-position: 0 -557.5px;
   }
 }
 
@@ -32,11 +33,6 @@
     background: $dark-white;
     color: $black;
 
-    p {
-      font-size: 14px;
-      padding: 0;
-    }
-
     &-info {
       float: left;
     }
@@ -51,19 +47,24 @@
       width: 37px;
       height: 42px;
       text-indent: -9999px;
-      background: url("/assets/logo-markonly-black@2x.png") no-repeat;
+      background: url('/assets/logo-markonly-black@2x.png') no-repeat;
       background-size: 100%;
+    }
+
+    p {
+      font-size: $fs-small;
+      padding: 0;
     }
   }
 
   &--report {
-    background: url("/assets/report-for-hero.png") repeat-y;
+    background: url('/assets/report-for-hero.png') repeat-y;
     background-position: 0 65px;
     background-size: 100%;
-    @include animation(scroll 18s linear infinite);
+    @include animation(scroll 15s linear infinite);
   }
 
-  @include media($breakpoint-medium) {
+  @media #{$breakpoint-medium} {
     height: 400px;
   }
  }

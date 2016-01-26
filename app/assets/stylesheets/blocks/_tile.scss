@@ -1,0 +1,54 @@
+/**
+ * TILE
+
+ * Like a button but to display large assets inside of them, such as logos.
+ */
+
+
+.tile {
+  display: inline-block;
+  padding: $padding;
+  border: 2px solid $light-black;
+  border-radius: $radius;
+  background: $white;
+  color: $black;
+  font-size: $fs-medium;
+  font-weight: 700;
+  outline: 0;
+  cursor: pointer;
+  @include appearance(none);
+
+  &:hover {
+    background: $dark-white;
+  }
+
+  &__label {
+    padding: 0;
+  }
+
+  &__image {
+    margin-right: $padding;
+    height: 32px;
+    width: 32px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media #{$breakpoint-medium} {
+      margin: 0 0 $padding;
+      height: 64px;
+      width: 100%;
+      float: none;
+    }
+  }
+
+  @media #{$breakpoint-to-medium} {
+    @include display(flex);
+    @include align-items(center);
+  }
+
+  @media #{$breakpoint-medium} {
+    text-align: center;
+  }
+}

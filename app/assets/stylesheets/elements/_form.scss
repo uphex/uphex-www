@@ -12,6 +12,7 @@
   border-radius: $radius;
   outline: 0;
   color: $black;
+  line-height: 1.5;
   @include appearance(none);
 
   &--black {
@@ -33,4 +34,13 @@
   &--yellow {
     border-color: $yellow;
   }
+}
+
+.label {
+  display: inline-block;
+  padding: $padding;
+  background: $dark-white;
+  border: 2px solid $light-black;
+  border-radius: $radius;
+  color: $light-black;
 }

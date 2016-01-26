@@ -1,0 +1,68 @@
+/**
+ * DOT
+
+ * A simple dot element.
+ */
+
+
+.dot {
+  display: inline-block;
+  width: $padding;
+  height: $padding;
+  border-radius: 99px;
+  background: $black;
+
+  &--small {
+    width: $padding - 5px;
+    height: $padding - 5px;
+  }
+
+  &--large {
+    width: $padding + 5px;
+    height: $padding + 5px;
+  }
+
+  &--light-black {
+    background: $light-black;
+  }
+
+  &--white {
+    background: $white;
+  }
+
+  &--dark-white {
+    background: $dark-white;
+  }
+
+  &--blue {
+    background: $blue;
+  }
+
+  &--green {
+    background: $green;
+  }
+
+  &--red {
+    background: $red;
+  }
+
+  &--yellow {
+    background: $yellow;
+  }
+
+  &--facebook {
+    background: $facebook;
+  }
+
+  &--google-analytics {
+    background: $google-analytics;
+  }
+
+  &--shopify {
+    background: $shopify;
+  }
+
+  &--twitter {
+    background: $twitter;
+  }
+}

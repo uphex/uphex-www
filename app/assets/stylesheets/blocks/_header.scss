@@ -12,8 +12,19 @@
 
   &__title {
     margin: 0;
+    padding: 0;
     float: left;
     line-height: 0;
+    border: 0;
+
+    a {
+      display: inline-block;
+      width: 128px;
+      height: 42px;
+      text-indent: -9999px;
+      background: url('/assets/logo-white@2x.png') no-repeat;
+      background-size: 100%;
+    }
 
     &--single {
       float: none;
@@ -21,20 +32,56 @@
     }
   }
 
-  &__links {
-    margin: 0 -10px;
-    padding: 0;
+  &__links-toggle {
     float: right;
+    padding: $padding;
+    margin: -($padding);
+    color: $white;
+    font-size: 32px;
+    cursor: pointer;
+
+    @media #{$breakpoint-medium} {
+      display: none;
+    }
+  }
+
+  &__links {
+    @media #{$breakpoint-to-medium} {
+      display: none;
+      position: absolute;
+      top: 63px;
+      left: 0;
+      margin: 0;
+      padding: 0 0 10px;
+      width: 100%;
+      background: $black;
+      box-shadow: 0 3px 8px rgba($black, 0.3);
+      z-index: $z-toolbar;
+    }
+
+    @media #{$breakpoint-medium} {
+      margin: 0 -10px;
+      padding: 0;
+      float: right;
+    }
   }
 
   &__link {
-    display: inline-block;
     margin: 0 10px;
     font-weight: 700;
     line-height: 42px;
 
     a {
       color: $white;
+    }
+
+    @media #{$breakpoint-to-medium} {
+      display: block;
+      margin: 0 $padding;
+    }
+
+    @media #{$breakpoint-medium} {
+      display: inline-block;
     }
   }
 
@@ -43,7 +90,7 @@
     padding-bottom: 0;
   }
 
-  @include media($breakpoint-large) {
+  @media #{$breakpoint-large} {
     padding: $padding * 2 0;
   }
 }

@@ -9,7 +9,13 @@
 .generic {
   padding: $padding 0;
 
-  @include media ($breakpoint-medium) {
+  &__small-form {
+    @media #{$breakpoint-medium} {
+      @include span-columns(6);
+    }
+  }
+
+  @media #{$breakpoint-medium} {
     padding: $padding * 2 0;
   }
 }

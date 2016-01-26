@@ -5,6 +5,7 @@
  * marketing messages or important call-to-actions
  */
 
+
 .hero {
   position: relative;
   height: auto;
@@ -15,27 +16,91 @@
 
   &__single-heading {
     text-align: center;
+
+    @media #{$breakpoint-medium} {
+      padding-bottom: $padding * 2;
+    }
   }
 
   &__text {
     line-height: 1.5;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-large;
+    }
   }
 
   &__text-link {
     display: block;
-    margin: $padding * 2 0 0;
+    margin: $padding 0 0;
     color: $white;
     text-align: center;
-    font-size: 14px;
+    font-size: $fs-small;
     line-height: 42px;
+  }
+
+  &__price-chart {
+    @media #{$breakpoint-small} {
+      @include span-columns(6);
+    }
+
+    @media #{$breakpoint-medium} {
+      @include span-columns(5);
+      @include shift(1);
+    }
+
+    @media #{$breakpoint-large} {
+      @include span-columns(4);
+      @include shift(2);
+    }
   }
 
   &__form {
     margin: 0 0 $padding * 2;
+
+    @media #{$breakpoint-small} {
+      @include span-columns(6);
+
+      &--single {
+        @include shift(3);
+      }
+    }
+
+    @media #{$breakpoint-medium} {
+      @include span-columns(5);
+
+      &--single {
+        @include span-columns(4);
+        @include shift(4);
+      }
+    }
+
+    @media #{$breakpoint-large} {
+      @include span-columns(4);
+    }
+  }
+
+  &__content {
+    @media #{$breakpoint-medium} {
+      padding: $padding * 2 0 0;
+      @include span-columns(6);
+    }
+
+    @media #{$breakpoint-large} {
+      padding: $padding * 3 0;
+    }
+  }
+
+  h1 {
+    border-bottom: 0;
   }
 
   .graphic {
     display: none;
+
+    @media #{$breakpoint-medium} {
+      @include span-columns(6);
+    }
   }
 
   &--white {
@@ -122,7 +187,7 @@
       z-index: $z-hidden;
     }
 
-    @include media($breakpoint-medium) {
+    @media #{$breakpoint-medium} {
       padding: $padding * 3 0 $padding !important;
 
       &:after {
@@ -131,61 +196,18 @@
     }
   }
 
-  @include media($breakpoint-small) {
-    padding: $padding * 2 0;
-
-    &__price-chart {
-      @include span-columns(6);
+  &--stretch {
+    @media #{$breakpoint-medium} {
+      @include calc(height, "100% - 174px"); // 100% - (header + footer size)
     }
 
-    &__form {
-      @include span-columns(6);
+    @media #{$breakpoint-large} {
+      @include calc(height, "100% - 204px"); // 100% - (header + footer size)
     }
   }
 
-  @include media($breakpoint-medium) {
+  @media #{$breakpoint-medium} {
     padding: $padding * 3 0;
     text-align: inherit;
-
-    &__single-heading {
-      padding-bottom: $padding * 2;
-    }
-
-    &__content {
-      padding: $padding * 2 0 0;
-      @include span-columns(6);
-    }
-
-    &__text {
-      font-size: 20px;
-    }
-
-    &__price-chart {
-      @include span-columns(5);
-      @include shift(1);
-    }
-
-    &__form {
-      @include span-columns(5);
-    }
-
-    .graphic {
-      @include span-columns(6);
-    }
-  }
-
-  @include media($breakpoint-large) {
-    &__content {
-      padding: $padding * 3 0;
-    }
-
-    &__price-chart {
-      @include span-columns(4);
-      @include shift(2);
-    }
-
-    &__form {
-      @include span-columns(4);
-    }
   }
 }

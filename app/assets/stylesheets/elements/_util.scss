@@ -4,6 +4,11 @@
  * Classes for quickly adding useful properties to an element
  */
 
+
+.showing {
+  display: block !important;
+}
+
 .hidden {
   display: none !important;
 }
@@ -29,23 +34,19 @@
   opacity: 0 !important;
 }
 
-.fill--blue {
-  fill: $blue;
+.color-positive {
+  color: $green;
 }
 
-.fill--green {
-  fill: $green;
+.color-negative {
+  color: $red;
 }
 
-.fill--red {
-  fill: $red;
+.nowrap {
+  white-space: nowrap;
 }
 
-.fill--yellow {
-  fill: $yellow;
-}
-
-.nospace {
-  padding: 0;
-  margin: 0;
+.clear {
+  overflow: hidden;
+  clear: both;
 }

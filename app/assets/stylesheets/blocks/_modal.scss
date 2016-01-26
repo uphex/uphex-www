@@ -7,6 +7,7 @@
  * modal is activated through JavaScript to assist this block.
  */
 
+
 .modal {
   height: 100%;
   width: 100%;
@@ -24,6 +25,7 @@
   @include transition(opacity $t-fast ease-in);
 
   &__content {
+    min-width: 50%;
     margin: $padding;
     padding: $padding 0;
     position: relative;
@@ -56,6 +58,19 @@
       border-color: $yellow;
     }
 
+    @media #{$breakpoint-medium} {
+      min-width: auto;
+      padding: ($padding * 2) $padding;
+      @include span-columns(8);
+
+      h2 {
+        margin-bottom: inherit;
+      }
+    }
+
+    @media #{$breakpoint-large} {
+      @include span-columns(6);
+    }
   }
 
   &__close {
@@ -66,10 +81,11 @@
     padding: 0;
     width: $padding * 2;
     height: $padding * 2;
-    font-size: 30px;
+    font-size: $fs-extralarge;
     font-weight: 400;
     text-align: center;
     line-height: $padding * 2;
+    cursor: pointer;
   }
 
   &__overlay {
@@ -83,31 +99,14 @@
   }
 
   .input-group {
-    @include media($breakpoint-small) {
+    @media #{$breakpoint-small} {
       @include span-columns(12);
       @include shift(0);
     }
 
-    @include media($breakpoint-extralarge) {
+    @media #{$breakpoint-extralarge} {
       @include span-columns(10);
       @include shift(1);
-    }
-  }
-
-  @include media($breakpoint-medium) {
-    &__content {
-      padding: ($padding * 2) $padding;
-      @include span-columns(8);
-
-      h2 {
-        margin-bottom: inherit;
-      }
-    }
-  }
-
-  @include media($breakpoint-large) {
-    &__content {
-      @include span-columns(6);
     }
   }
 }

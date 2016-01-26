@@ -7,31 +7,34 @@
 
 h1 {
   margin: 0 0 $padding * 2;
-  font-size: 30px;
+  padding: 0 0 $padding;
+  font-size: $fs-extralarge;
   line-height: 1.3;
+  border-bottom: 2px solid $dark-white;
 
-  @include media($breakpoint-medium) {
-    font-size: 40px;
+  @media #{$breakpoint-medium} {
+    padding: 0 0 ($padding * 2);
+    font-size: $fs-megalarge;
   }
 }
 
 h2 {
-  margin: 0 0 $padding * 2;
-  font-size: 20px;
+  margin: 0 0 $padding;
+  font-size: $fs-large;
   line-height: 1.2;
 
-  @include media($breakpoint-medium) {
-    font-size: 28px;
+  @media #{$breakpoint-medium} {
+    font-size: $fs-extralarge;
   }
 }
 
 h3 {
   margin: 0 0 $padding;
-  font-size: 16px;
+  font-size: $fs-medium;
   line-height: 1.3;
 
-  @include media($breakpoint-medium) {
-    font-size: 20px;
+  @media #{$breakpoint-medium} {
+    font-size: $fs-large;
   }
 }
 

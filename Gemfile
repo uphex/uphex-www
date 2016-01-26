@@ -22,6 +22,7 @@ gem 'redcarpet'
 gem 'sass'
 gem 'bourbon'
 gem 'neat'
+gem 'font-awesome-sass'
 gem 'sass-globbing'
 gem 'padrino-sprockets', :require => "padrino/sprockets"
 

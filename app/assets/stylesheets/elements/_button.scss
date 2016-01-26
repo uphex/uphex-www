@@ -6,6 +6,25 @@
  */
 
 
+@mixin button-color($bg-color, $text-color: $white) {
+  background: $bg-color;
+  color: $text-color;
+
+  &.button--disabled,
+  &[disabled],
+  &:disabled {
+    background: lighten($bg-color, 20%);
+
+    &:hover {
+      background: lighten($bg-color, 20%);
+    }
+  }
+
+  &:hover {
+    background: lighten($bg-color, 5%);
+  }
+}
+
 .button {
   display: inline-block;
   padding: $padding $padding * 2;
@@ -13,9 +32,10 @@
   border-radius: $radius;
   background: $black;
   color: $white;
-  font-size: 16px;
+  font-size: $fs-medium;
   font-weight: 700;
   outline: 0;
+  cursor: pointer;
   @include appearance(none);
 
   &:hover {
@@ -28,9 +48,21 @@
     background: lighten($black, 50%);
   }
 
-  &--small {
+  &--tiny {
     padding: 0 $padding;
-    font-size: 14px;
+    font-size: $fs-small;
+  }
+
+  &--small {
+    padding: ($padding / 2) $padding;
+    font-size: $fs-small;
+  }
+
+  &--small-on-small {
+    @media #{$breakpoint-medium} {
+      padding: ($padding / 2) $padding;
+      font-size: $fs-small;
+    }
   }
 
   &--expand {
@@ -44,92 +76,63 @@
     width: 100%;
     text-align: center;
 
-    @include media($breakpoint-small) {
+    @media #{$breakpoint-small} {
       display: inline-block;
       width: auto;
     }
   }
 
-  &--white {
+  &--remove {
+    padding: 0;
+    width: ($padding * 2);
+    height: ($padding * 2);
     background: $white;
-    color: $black;
+    border: 1px solid $red;
+    line-height: ($padding * 2);
+    font-size: $fs-large;
+    font-weight: 400;
+    text-align: center;
+    color: $red;
 
     &:hover {
-      background: darken($white, 5%);
+      color: $white;
+      background: $red;
     }
+  }
+
+  &--white {
+    @include button-color($white, $black);
   }
 
   &--blue {
-    background: $blue;
-
-    &.button--disabled,
-    &[disabled],
-    &:disabled {
-      background: lighten($blue, 20%);
-
-      &:hover {
-        background: lighten($blue, 20%);
-      }
-    }
-
-    &:hover {
-      background: lighten($blue, 5%);
-    }
+    @include button-color($blue);
   }
 
   &--green {
-    background: $green;
-
-    &.button--disabled,
-    &[disabled],
-    &:disabled {
-      background: lighten($green, 20%);
-
-      &:hover {
-        background: lighten($green, 20%);
-      }
-    }
-
-    &:hover {
-      background: lighten($green, 5%);
-    }
+    @include button-color($green);
   }
 
   &--red {
-    background: $red;
-
-    &.button--disabled,
-    &[disabled],
-    &:disabled {
-      background: lighten($red, 20%);
-
-      &:hover {
-        background: lighten($red, 20%);
-      }
-    }
-
-    &:hover {
-      background: lighten($red, 5%);
-    }
+    @include button-color($red);
   }
 
   &--yellow {
-    background: $yellow;
-    color: $black;
+    @include button-color($yellow, $black);
+  }
 
-    &.button--disabled,
-    &[disabled],
-    &:disabled {
-      background: lighten($yellow, 20%);
-      color: $white;
+  &--facebook {
+    @include button-color($facebook);
+  }
 
-      &:hover {
-        background: lighten($yellow, 20%);
-      }
-    }
+  &--google-analytics {
+    @include button-color($google-analytics);
+  }
 
-    &:hover {
-      background: lighten($yellow, 5%);
-    }
+  &--shopify {
+    @include button-color($shopify);
+  }
+
+  &--twitter {
+    @include button-color($twitter);
   }
 }

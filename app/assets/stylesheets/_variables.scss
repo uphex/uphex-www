@@ -8,48 +8,78 @@
 /**
  * Neat Overrides
  */
+
 $border-box-sizing: true !global;
 
 /**
  * Sizes
  */
+
 $padding : 15px;
 $radius  : 3px;
 
 /**
  * Responsive Breakpoints
 
- * These are used with Bourbon's media query mixin to help with our
- * mobile-first development
- * ex: @include media($breakpoint-small)
+ * We predominantly follow mobile-first pattern
+
+ * We also have variables for specific ranges. These should only be used
+ * in situations where we’d have to write a lot of CSS that assumes too
+ * many things (such as resetting styles between breakpoints)
  */
 
-$breakpoint-small      : min-width 36em; // Landscape phone and up (576px)
-$breakpoint-medium     : min-width 48em; // Tablet and up (768px)
-$breakpoint-large      : min-width 62em; // Desktop and up (992px)
-$breakpoint-extralarge : min-width 75em; // Bigger desktop and up (1200px)
+$breakpoint-to-small      : "(max-width: 575px)";  // Up to 575px
+$breakpoint-small         : "(min-width: 576px)";  // Landscape phone and up
+$breakpoint-to-medium     : "(max-width: 767px)";  // Up to Tablet
+$breakpoint-medium        : "(min-width: 768px)";  // Tablet and up
+$breakpoint-to-large      : "(max-width: 991px)";  // Up to dsktop
+$breakpoint-large         : "(min-width: 992px)";  // Desktop and up
+$breakpoint-to-extralarge : "(max-width: 1199px)"; // Up to Bigger desktop
+$breakpoint-extralarge    : "(min-width: 1200px)"; // Bigger desktop and up
+
+$breakpoint-vertical-small : "(min-height: 768px)";
 
 /**
  * Colors
 
- * These are directly from UpHex branding. There should be almost no
- * reason to add more variables here. Instead, modify existing ones by
- * using SASS functions to darken, lighten and mix colors for your purposes.
+ * These are directly from UpHex branding and from our providers (Twitter,
+ * Facebook, etc.). There should be almost no reason to add more variables
+ * here. Instead, modify existing ones by using SASS functions to darken,
+ * lighten and mix colors for your purposes.
  */
 
-$black       : #23272b;
-$light-black : #5e7388;
-$dark-white  : #edf2f7;
-$white       : #fff;
-$blue        : #2781ef;
-$green       : #24cc6b;
-$red         : #d73333;
-$yellow      : #f5e139;
+$black            : #23272b;
+$light-black      : #5e7388;
+$dark-white       : #edf2f7;
+$white            : #fff;
+$blue             : #2781ef;
+$green            : #24cc6b;
+$red              : #d73333;
+$yellow           : #f5e139;
+
+$facebook         : #4967a9;
+$google-analytics : #f7931e;
+$shopify          : #7fa932;
+$twitter          : #2aa9e0;
+
+/**
+ * Font-Sizes
+
+ * Always use these variables when sizing type. Sizing font icons are
+ * the only exception.
+ */
+
+$fs-extrasmall : 12px;
+$fs-small      : 14px;
+$fs-medium     : 16px;
+$fs-large      : 20px;
+$fs-extralarge : 30px;
+$fs-megalarge  : 40px;
 
 /**
  * Z-Indicies
 
- * Using these variables should ALWAYS be used when declaring a z-index value
+ * Always use these variables when declaring z-index values.
  */
 
 $z-hidden  : -1;

@@ -1,0 +1,104 @@
+/**
+ * CARD
+
+ * A representation of data, showing a title at the top and three metrics below
+ * it with values and labels
+ */
+
+
+.card {
+  margin-bottom: 15px;
+  border: 1px solid $dark-white;
+
+  &__content {
+    @include outer-container;
+  }
+
+  &__column {
+    padding: ($padding / 2) 0;
+    margin: ($padding / 2) 0;
+    text-align: center;
+    @include span-columns(4);
+
+    &:first-of-type {
+      border-right: 1px solid $dark-white;
+    }
+
+    &:last-of-type {
+      border-left: 1px solid $dark-white;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 10px;
+    background: $dark-white;
+    font-size: $fs-small;
+    font-weight: 400;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-medium;
+    }
+  }
+
+  &__info {
+    padding-top: 5px;
+    margin: 0 10px 5px;
+    border-top: 1px solid $dark-white;
+    font-size: $fs-extrasmall;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-small;
+    }
+  }
+
+  &__thisweek {
+    margin: 0;
+  }
+
+  &__data {
+    padding: 15px 0;
+
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    [class*='col-'] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  &__datanum {
+    font-size: $fs-small;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-medium;
+    }
+  }
+
+  &__value {
+    font-size: $fs-medium;
+    font-weight: 400;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-large;
+    }
+  }
+
+  &__label {
+    margin: 0;
+    padding: 0;
+    color: $light-black;
+    font-size: $fs-extrasmall;
+
+    @media #{$breakpoint-medium} {
+      font-size: $fs-small;
+    }
+  }
+
+  @media #{$breakpoint-medium} {
+    margin-bottom: 30px;
+  }
+}

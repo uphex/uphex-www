@@ -10,11 +10,10 @@
 
 .container {
   position: relative;
-  overflow: hidden;
   padding: 0 $padding;
   @include outer-container();
 
-  @include media($breakpoint-medium) {
+  @media #{$breakpoint-medium} {
     padding: 0 $padding * 2;
   }
 }
