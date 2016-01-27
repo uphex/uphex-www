@@ -77,6 +77,11 @@
 
  * Blocks that follow the MED methodlogy. Meaning most of these contain
  * elements and modifiers beneath them, though can also contain other blocks.
+
+ * Not all blocks have been tested being inserted into other blocks. There are
+ * some parent blocks that expect other blocks to be nested inside them. Others
+ * have a rigid grid system applied and may not work with certain blocks inside
+ * them.
  */
 
 @import "blocks/_ask.scss";
@@ -117,7 +122,8 @@
 /**
  * Shame
 
- * Styles that were written long ago or hacks that need to be refactored.
+ * Styles that were written long ago or hacks that need to be refactored. This
+ * files exists to easily identify styles that should be refactored.
  */
 
 @import "_shame.scss"
