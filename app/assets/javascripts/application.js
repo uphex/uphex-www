@@ -1,12 +1,11 @@
-var prelaunchBtns = document.getElementsByClassName('js-prelaunch-modal');
+var closeModal = document.getElementsByClassName('js-close-modal');
 var overlay = document.getElementById('overlay');
 var modal = document.getElementById('modal');
-var signupContent = document.getElementById('signup-content');
 var signedupContent = document.getElementById('signedup-content');
 var body = document.getElementsByTagName('body')[0];
 
-for (var i = 0; i < prelaunchBtns.length; i++) {
-  prelaunchBtns[i].addEventListener('click', function(e) {
+for (var i = 0; i < closeModal.length; i++) {
+  closeModal[i].addEventListener('click', function(e) {
     e.preventDefault();
     toggleModal();
   }, false)
@@ -40,25 +39,6 @@ function coIdentify(email) {
   });
 }
 
-document.pricingSignup.addEventListener('submit', function(e) {
-  e.preventDefault();
-  var email = document.getElementById('pricing-signup-email').value;
-
-  if (!signedupContent.classList.contains('hidden')) {
-    toggleModal();
-  }
-
-  else if (isEmail(email)) {
-    signupContent.classList.toggle('hidden');
-    signedupContent.classList.toggle('hidden');
-    coIdentify(email);
-  }
-
-  else {
-    document.getElementById('pricing-signup-message').classList.toggle('hidden');
-  }
-})
-
 document.sampleSignup.addEventListener('submit', function(e) {
   e.preventDefault();
   var email = document.getElementById('sample-signup-email').value;
@@ -68,7 +48,6 @@ document.sampleSignup.addEventListener('submit', function(e) {
   }
 
   else if (isEmail(email)) {
-    signupContent.classList.toggle('hidden');
     signedupContent.classList.toggle('hidden');
     toggleModal();
     coIdentify(email);
