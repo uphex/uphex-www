@@ -7,13 +7,19 @@
 
 h1 {
   margin: 0 0 $padding * 2;
-  padding: 0 0 $padding;
   font-size: $fs-extralarge;
   line-height: 1.3;
-  border-bottom: 2px solid $dark-white;
+
+  &.with-border {
+    padding: 0 0 $padding;
+    border-bottom: 2px solid $dark-white;
+
+    @media #{$breakpoint-medium} {
+      padding: 0 0 ($padding * 2);
+    }
+  }
 
   @media #{$breakpoint-medium} {
-    padding: 0 0 ($padding * 2);
     font-size: $fs-megalarge;
   }
 }
@@ -39,8 +45,7 @@ h3 {
 }
 
 p {
-  margin: 0;
-  padding: 0 0 $padding * 2;
+  margin: 0 0 $padding * 2;
 }
 
 a {
