@@ -1,7 +1,8 @@
 /**
  * MODAL
 
- * A block for a modal window that appears above the rest of the app
+ * A block for a modal window that appears above the rest of the app. The modal
+ * contains an overlay to obscure the page, a content section and a close button.
 
  * Note: The body element will have a modifier applied to it when a
  * modal is activated through JavaScript to assist this block.

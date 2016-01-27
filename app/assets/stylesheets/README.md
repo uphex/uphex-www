@@ -1,7 +1,6 @@
 # UpHex Styles
 
-We use [BEM naming conventions](https://en.bem.info/method/naming-convention/) for organizing our CSS. With that as the foundation we organize our each SCSS file in the following structure:
-
+We use [BEM naming conventions](https://en.bem.info/method/naming-convention/) for organizing our CSS and order rules to have an ideal [specifity graph](http://csswizardry.com/2014/10/the-specificity-graph/). With that as the foundation we organize our each SCSS file in the following structure:
 
 - comment describing the purpose of the block
 

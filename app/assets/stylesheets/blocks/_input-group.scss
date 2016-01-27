@@ -67,7 +67,7 @@
       width: 100%;
       padding-left: 0;
       padding-right: 0;
-      line-height: 28px;
+      line-height: 28px; // modify line-height to match siblings with borders
     }
 
     @media #{$breakpoint-small} {

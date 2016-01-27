@@ -7,6 +7,8 @@
  */
 
 
+// Cheating a bit here; we assume whatever element uses this keyframe will have
+// a specific height and we calculate the background-position based on that.
 @include keyframes(scroll) {
   from {
     background-position: 0 65px;
@@ -21,9 +23,9 @@
   margin: 0;
   overflow: hidden;
   position: relative;
-  z-index: $z-base;
   background: $white;
   border-radius: $radius;
+  z-index: $z-base;
 
   &__header {
     position: relative;
@@ -53,7 +55,7 @@
 
     p {
       font-size: $fs-small;
-      padding: 0;
+      margin: 0;
     }
   }
 
@@ -67,4 +69,4 @@
   @media #{$breakpoint-medium} {
     height: 400px;
   }
- }
+}

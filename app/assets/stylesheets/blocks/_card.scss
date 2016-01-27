@@ -64,6 +64,7 @@
       margin-right: 0;
     }
 
+    // overwriting column gutters here so we don't do them globally
     [class*='col-'] {
       padding-left: 0 !important;
       padding-right: 0 !important;

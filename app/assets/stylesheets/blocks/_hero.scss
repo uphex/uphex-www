@@ -160,6 +160,7 @@
     }
   }
 
+  // adds a slant decoration to the end of the block
   &--slant {
     padding: $padding * 2 0;
     background: inherit;
@@ -196,6 +197,7 @@
     }
   }
 
+  // stretches the entire height of the viewport
   &--stretch {
     @media #{$breakpoint-medium} {
       @include calc(height, "100% - 174px"); // 100% - (header + footer size)

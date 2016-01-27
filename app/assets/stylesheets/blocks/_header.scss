@@ -48,6 +48,7 @@
 
   &__links {
     @media #{$breakpoint-to-medium} {
+      // we transform the menu into a vertical list for small screens
       display: none;
       position: absolute;
       top: 63px;
@@ -61,6 +62,7 @@
     }
 
     @media #{$breakpoint-medium} {
+      // we use a simple horizontal list for bigger screens
       margin: 0 -10px;
       padding: 0;
       float: right;

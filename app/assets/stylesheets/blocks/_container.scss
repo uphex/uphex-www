@@ -9,6 +9,7 @@
 
 
 .container {
+  // no overflow: hidden set incase we have elements that could extend outside of it
   position: relative;
   padding: 0 $padding;
   @include outer-container();

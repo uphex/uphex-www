@@ -11,6 +11,7 @@
   position: relative;
 
   > .button {
+    // direct child buttons are moved to the top right when we're not on mobile
     margin: 0 0 $padding;
 
     @media #{$breakpoint-small} {
