@@ -1,7 +1,6 @@
 var closeModal = document.getElementsByClassName('js-close-modal');
 var overlay = document.getElementById('overlay');
 var modal = document.getElementById('modal');
-var signupContent = document.getElementById('signup-content');
 var signedupContent = document.getElementById('signedup-content');
 var body = document.getElementsByTagName('body')[0];
 
@@ -49,7 +48,6 @@ document.sampleSignup.addEventListener('submit', function(e) {
   }
 
   else if (isEmail(email)) {
-    signupContent.classList.toggle('hidden');
     signedupContent.classList.toggle('hidden');
     toggleModal();
     coIdentify(email);
