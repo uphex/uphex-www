@@ -52,7 +52,7 @@ document.sampleSignup.addEventListener('submit', function(e) {
     signupContent.classList.toggle('hidden');
     signedupContent.classList.toggle('hidden');
     toggleModal();
-    // coIdentify(email);
+    coIdentify(email);
   }
 
   else {
