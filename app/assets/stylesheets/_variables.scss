@@ -13,6 +13,8 @@ $border-box-sizing: true !global;
 
 /**
  * Sizes
+ * All sizes affecting whitespace, such as margins and padding, should derive
+ * from these values, though there will always be exceptions.
  */
 
 $padding : 15px;
@@ -37,6 +39,9 @@ $breakpoint-large         : "(min-width: 992px)";  // Desktop and up
 $breakpoint-to-extralarge : "(max-width: 1199px)"; // Up to Bigger desktop
 $breakpoint-extralarge    : "(min-width: 1200px)"; // Bigger desktop and up
 
+// The below breakpoint is for detecing large viewports. It's usually used in
+// combination with one of the above breakpoints to test that the viewport
+// has reasonable screen real estate
 $breakpoint-vertical-small : "(min-height: 768px)";
 
 /**
@@ -66,7 +71,7 @@ $twitter          : #2aa9e0;
  * Font-Sizes
 
  * Always use these variables when sizing type. Sizing font icons are
- * the only exception.
+ * the only exception since they may require more detailed sizing.
  */
 
 $fs-extrasmall : 12px;
@@ -93,7 +98,7 @@ $z-modal   : 6;
 /**
  * Transitions
 
- * So our animations play at a consistent rate
+ * So our animations play at consistent rates
  */
 
  $t-fast : 0.15s;
