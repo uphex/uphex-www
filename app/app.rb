@@ -11,6 +11,18 @@ module UpHex
 
     enable :sessions
 
+    configure :development do
+      set :app_host, "dev.app.uphex.com"
+    end
+    
+    configure :staging do
+      set :app_host, "staging.app.uphex.com"
+    end
+
+    configure :production do
+      set :app_host, "app.uphex.com"
+    end
+    
     ##
     # Caching support
     #

@@ -7,6 +7,8 @@ UpHex::Web.controllers do
   end
 
   get "/:id" do
+    @app_host = settings.app_host
+    
     with_missing_template_handling do
       render "pages/#{params[:id]}"
     end
